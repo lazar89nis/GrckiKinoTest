@@ -8,17 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		7ED047962C4A8026004DB2F9 /* GrckiKinoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED047952C4A8026004DB2F9 /* GrckiKinoApp.swift */; };
-		7ED047982C4A8026004DB2F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED047972C4A8026004DB2F9 /* ContentView.swift */; };
 		7ED0479A2C4A8027004DB2F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED047992C4A8027004DB2F9 /* Assets.xcassets */; };
 		7ED0479D2C4A8027004DB2F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED0479C2C4A8027004DB2F9 /* Preview Assets.xcassets */; };
+		7ED047A82C4A842B004DB2F9 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED047A72C4A842B004DB2F9 /* Config.swift */; };
+		7ED047B22C4A883E004DB2F9 /* RoundsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED047B12C4A883E004DB2F9 /* RoundsRepository.swift */; };
+		7ED047B42C4A884E004DB2F9 /* RoundsDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED047B32C4A884E004DB2F9 /* RoundsDependency.swift */; };
+		7ED047B62C4A8860004DB2F9 /* RoundsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED047B52C4A8860004DB2F9 /* RoundsCoordinator.swift */; };
+		7ED047BC2C4A88AC004DB2F9 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED047BB2C4A88AC004DB2F9 /* SplashCoordinator.swift */; };
+		7ED047BE2C4A88B5004DB2F9 /* SplashDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED047BD2C4A88B5004DB2F9 /* SplashDependency.swift */; };
+		7ED047C22C4A88DC004DB2F9 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED047C12C4A88DC004DB2F9 /* SplashViewModel.swift */; };
+		7ED047C42C4A88E6004DB2F9 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED047C32C4A88E6004DB2F9 /* SplashView.swift */; };
+		7ED047C62C4A8960004DB2F9 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED047C52C4A8960004DB2F9 /* Injectable.swift */; };
+		7ED047C82C4A8B01004DB2F9 /* Coordinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED047C72C4A8B01004DB2F9 /* Coordinable.swift */; };
+		7ED047CA2C4A8C4E004DB2F9 /* RoundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED047C92C4A8C4E004DB2F9 /* RoundsView.swift */; };
+		7ED047CC2C4A8C5A004DB2F9 /* RoundsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED047CB2C4A8C5A004DB2F9 /* RoundsViewModel.swift */; };
+		7ED047D02C4A8E6F004DB2F9 /* UIScreen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED047CF2C4A8E6F004DB2F9 /* UIScreen+Extensions.swift */; };
+		7ED047D22C4A8E96004DB2F9 /* UIWindow+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED047D12C4A8E96004DB2F9 /* UIWindow+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7ED047922C4A8026004DB2F9 /* GrckiKino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrckiKino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ED047952C4A8026004DB2F9 /* GrckiKinoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrckiKinoApp.swift; sourceTree = "<group>"; };
-		7ED047972C4A8026004DB2F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7ED047992C4A8027004DB2F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ED0479C2C4A8027004DB2F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7ED047A72C4A842B004DB2F9 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		7ED047B12C4A883E004DB2F9 /* RoundsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundsRepository.swift; sourceTree = "<group>"; };
+		7ED047B32C4A884E004DB2F9 /* RoundsDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundsDependency.swift; sourceTree = "<group>"; };
+		7ED047B52C4A8860004DB2F9 /* RoundsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundsCoordinator.swift; sourceTree = "<group>"; };
+		7ED047BB2C4A88AC004DB2F9 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
+		7ED047BD2C4A88B5004DB2F9 /* SplashDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashDependency.swift; sourceTree = "<group>"; };
+		7ED047C12C4A88DC004DB2F9 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		7ED047C32C4A88E6004DB2F9 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		7ED047C52C4A8960004DB2F9 /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
+		7ED047C72C4A8B01004DB2F9 /* Coordinable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinable.swift; sourceTree = "<group>"; };
+		7ED047C92C4A8C4E004DB2F9 /* RoundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundsView.swift; sourceTree = "<group>"; };
+		7ED047CB2C4A8C5A004DB2F9 /* RoundsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundsViewModel.swift; sourceTree = "<group>"; };
+		7ED047CF2C4A8E6F004DB2F9 /* UIScreen+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extensions.swift"; sourceTree = "<group>"; };
+		7ED047D12C4A8E96004DB2F9 /* UIWindow+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +77,10 @@
 		7ED047942C4A8026004DB2F9 /* GrckiKino */ = {
 			isa = PBXGroup;
 			children = (
-				7ED047952C4A8026004DB2F9 /* GrckiKinoApp.swift */,
-				7ED047972C4A8026004DB2F9 /* ContentView.swift */,
-				7ED047992C4A8027004DB2F9 /* Assets.xcassets */,
+				7ED047A62C4A83C8004DB2F9 /* Fixtures */,
+				7ED047A52C4A83BA004DB2F9 /* Components */,
+				7ED047A42C4A83AD004DB2F9 /* Modules */,
+				7ED047A32C4A8396004DB2F9 /* AppCore */,
 				7ED0479B2C4A8027004DB2F9 /* Preview Content */,
 			);
 			path = GrckiKino;
@@ -65,6 +92,146 @@
 				7ED0479C2C4A8027004DB2F9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7ED047A32C4A8396004DB2F9 /* AppCore */ = {
+			isa = PBXGroup;
+			children = (
+				7ED047CD2C4A8E23004DB2F9 /* Helpers */,
+				7ED047952C4A8026004DB2F9 /* GrckiKinoApp.swift */,
+				7ED047992C4A8027004DB2F9 /* Assets.xcassets */,
+				7ED047A72C4A842B004DB2F9 /* Config.swift */,
+			);
+			path = AppCore;
+			sourceTree = "<group>";
+		};
+		7ED047A42C4A83AD004DB2F9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				7ED047AB2C4A87C2004DB2F9 /* Application */,
+				7ED047A92C4A87AA004DB2F9 /* Onboarding */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		7ED047A52C4A83BA004DB2F9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7ED047A62C4A83C8004DB2F9 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		7ED047A92C4A87AA004DB2F9 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				7ED047AA2C4A87B1004DB2F9 /* Splash */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		7ED047AA2C4A87B1004DB2F9 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				7ED047C02C4A88C6004DB2F9 /* ViewModels */,
+				7ED047BF2C4A88BF004DB2F9 /* Views */,
+				7ED047BB2C4A88AC004DB2F9 /* SplashCoordinator.swift */,
+				7ED047BD2C4A88B5004DB2F9 /* SplashDependency.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		7ED047AB2C4A87C2004DB2F9 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				7ED047AD2C4A87F5004DB2F9 /* Game */,
+				7ED047AC2C4A87CD004DB2F9 /* Rounds */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		7ED047AC2C4A87CD004DB2F9 /* Rounds */ = {
+			isa = PBXGroup;
+			children = (
+				7ED047B02C4A8828004DB2F9 /* Models */,
+				7ED047AF2C4A8820004DB2F9 /* ViewModels */,
+				7ED047AE2C4A8819004DB2F9 /* Views */,
+				7ED047B12C4A883E004DB2F9 /* RoundsRepository.swift */,
+				7ED047B32C4A884E004DB2F9 /* RoundsDependency.swift */,
+				7ED047B52C4A8860004DB2F9 /* RoundsCoordinator.swift */,
+			);
+			path = Rounds;
+			sourceTree = "<group>";
+		};
+		7ED047AD2C4A87F5004DB2F9 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		7ED047AE2C4A8819004DB2F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7ED047C92C4A8C4E004DB2F9 /* RoundsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7ED047AF2C4A8820004DB2F9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7ED047CB2C4A8C5A004DB2F9 /* RoundsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7ED047B02C4A8828004DB2F9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7ED047BF2C4A88BF004DB2F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7ED047C32C4A88E6004DB2F9 /* SplashView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7ED047C02C4A88C6004DB2F9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7ED047C12C4A88DC004DB2F9 /* SplashViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7ED047CD2C4A8E23004DB2F9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7ED047CE2C4A8E43004DB2F9 /* Extensions */,
+				7ED047C52C4A8960004DB2F9 /* Injectable.swift */,
+				7ED047C72C4A8B01004DB2F9 /* Coordinable.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7ED047CE2C4A8E43004DB2F9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7ED047CF2C4A8E6F004DB2F9 /* UIScreen+Extensions.swift */,
+				7ED047D12C4A8E96004DB2F9 /* UIWindow+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +304,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7ED047982C4A8026004DB2F9 /* ContentView.swift in Sources */,
+				7ED047B22C4A883E004DB2F9 /* RoundsRepository.swift in Sources */,
 				7ED047962C4A8026004DB2F9 /* GrckiKinoApp.swift in Sources */,
+				7ED047BC2C4A88AC004DB2F9 /* SplashCoordinator.swift in Sources */,
+				7ED047C22C4A88DC004DB2F9 /* SplashViewModel.swift in Sources */,
+				7ED047C62C4A8960004DB2F9 /* Injectable.swift in Sources */,
+				7ED047CA2C4A8C4E004DB2F9 /* RoundsView.swift in Sources */,
+				7ED047D22C4A8E96004DB2F9 /* UIWindow+Extensions.swift in Sources */,
+				7ED047C82C4A8B01004DB2F9 /* Coordinable.swift in Sources */,
+				7ED047C42C4A88E6004DB2F9 /* SplashView.swift in Sources */,
+				7ED047B42C4A884E004DB2F9 /* RoundsDependency.swift in Sources */,
+				7ED047A82C4A842B004DB2F9 /* Config.swift in Sources */,
+				7ED047BE2C4A88B5004DB2F9 /* SplashDependency.swift in Sources */,
+				7ED047B62C4A8860004DB2F9 /* RoundsCoordinator.swift in Sources */,
+				7ED047CC2C4A8C5A004DB2F9 /* RoundsViewModel.swift in Sources */,
+				7ED047D02C4A8E6F004DB2F9 /* UIScreen+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,18 +458,23 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lazar89nis.GrckiKino;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,18 +492,23 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lazar89nis.GrckiKino;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

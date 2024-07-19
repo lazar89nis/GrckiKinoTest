@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct GrckiKinoApp: App {
+    
+    let coordinator = SplashCoordinator(dependency: SplashDependency())
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            coordinator.view
         }
     }
 }
