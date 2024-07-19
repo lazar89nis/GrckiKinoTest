@@ -16,7 +16,7 @@ struct SplashView: View {
     var body: some View {
         rootView
             .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                     withAnimation {
                         viewModel.splashFinished()
                     }
@@ -33,11 +33,13 @@ struct SplashView: View {
     }
     
     var backgroundView: some View {
-        Color.red
+        Color(R.color.background)
     }
     
     var logoView: some View {
         Text("GRCKI KINO")
+            .foregroundColor(R.color.textWhite.color)
+            .font(R.font.neuePlakBold.font(size: 30))
     }
     
     var rootView: some View {

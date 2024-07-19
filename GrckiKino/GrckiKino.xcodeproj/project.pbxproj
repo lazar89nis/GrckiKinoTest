@@ -24,6 +24,14 @@
 		7ED047CC2C4A8C5A004DB2F9 /* RoundsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED047CB2C4A8C5A004DB2F9 /* RoundsViewModel.swift */; };
 		7ED047D02C4A8E6F004DB2F9 /* UIScreen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED047CF2C4A8E6F004DB2F9 /* UIScreen+Extensions.swift */; };
 		7ED047D22C4A8E96004DB2F9 /* UIWindow+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED047D12C4A8E96004DB2F9 /* UIWindow+Extensions.swift */; };
+		7ED047D82C4A8F80004DB2F9 /* Neue Plak Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ED047D42C4A8F7F004DB2F9 /* Neue Plak Regular.ttf */; };
+		7ED047D92C4A8F80004DB2F9 /* Neue Plak SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ED047D52C4A8F80004DB2F9 /* Neue Plak SemiBold.ttf */; };
+		7ED047DA2C4A8F80004DB2F9 /* Neue Plak Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ED047D62C4A8F80004DB2F9 /* Neue Plak Black.ttf */; };
+		7ED047DB2C4A8F80004DB2F9 /* Neue Plak Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ED047D72C4A8F80004DB2F9 /* Neue Plak Bold.ttf */; };
+		7EE6F40E2C4A933F00A17D77 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 7EE6F40D2C4A933F00A17D77 /* RswiftLibrary */; };
+		7EE6F4132C4A948800A17D77 /* RSwift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6F4122C4A948800A17D77 /* RSwift+Extensions.swift */; };
+		7EE6F4192C4A965300A17D77 /* rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 7EE6F4182C4A965300A17D77 /* rswift */; };
+		7EE6F41C2C4A9B7000A17D77 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE6F41B2C4A9B7000A17D77 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +53,13 @@
 		7ED047CB2C4A8C5A004DB2F9 /* RoundsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundsViewModel.swift; sourceTree = "<group>"; };
 		7ED047CF2C4A8E6F004DB2F9 /* UIScreen+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extensions.swift"; sourceTree = "<group>"; };
 		7ED047D12C4A8E96004DB2F9 /* UIWindow+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extensions.swift"; sourceTree = "<group>"; };
+		7ED047D42C4A8F7F004DB2F9 /* Neue Plak Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neue Plak Regular.ttf"; sourceTree = "<group>"; };
+		7ED047D52C4A8F80004DB2F9 /* Neue Plak SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neue Plak SemiBold.ttf"; sourceTree = "<group>"; };
+		7ED047D62C4A8F80004DB2F9 /* Neue Plak Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neue Plak Black.ttf"; sourceTree = "<group>"; };
+		7ED047D72C4A8F80004DB2F9 /* Neue Plak Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neue Plak Bold.ttf"; sourceTree = "<group>"; };
+		7ED047DC2C4A8F9E004DB2F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7EE6F4122C4A948800A17D77 /* RSwift+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RSwift+Extensions.swift"; sourceTree = "<group>"; };
+		7EE6F41B2C4A9B7000A17D77 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EE6F40E2C4A933F00A17D77 /* RswiftLibrary in Frameworks */,
+				7EE6F4192C4A965300A17D77 /* rswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +80,7 @@
 			children = (
 				7ED047942C4A8026004DB2F9 /* GrckiKino */,
 				7ED047932C4A8026004DB2F9 /* Products */,
+				7EE6F4172C4A965300A17D77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +95,7 @@
 		7ED047942C4A8026004DB2F9 /* GrckiKino */ = {
 			isa = PBXGroup;
 			children = (
+				7ED047DC2C4A8F9E004DB2F9 /* Info.plist */,
 				7ED047A62C4A83C8004DB2F9 /* Fixtures */,
 				7ED047A52C4A83BA004DB2F9 /* Components */,
 				7ED047A42C4A83AD004DB2F9 /* Modules */,
@@ -97,10 +116,12 @@
 		7ED047A32C4A8396004DB2F9 /* AppCore */ = {
 			isa = PBXGroup;
 			children = (
+				7ED047D32C4A8F72004DB2F9 /* Fonts */,
 				7ED047CD2C4A8E23004DB2F9 /* Helpers */,
 				7ED047952C4A8026004DB2F9 /* GrckiKinoApp.swift */,
 				7ED047992C4A8027004DB2F9 /* Assets.xcassets */,
 				7ED047A72C4A842B004DB2F9 /* Config.swift */,
+				7EE6F41B2C4A9B7000A17D77 /* Launch Screen.storyboard */,
 			);
 			path = AppCore;
 			sourceTree = "<group>";
@@ -230,8 +251,27 @@
 			children = (
 				7ED047CF2C4A8E6F004DB2F9 /* UIScreen+Extensions.swift */,
 				7ED047D12C4A8E96004DB2F9 /* UIWindow+Extensions.swift */,
+				7EE6F4122C4A948800A17D77 /* RSwift+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7ED047D32C4A8F72004DB2F9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7ED047D62C4A8F80004DB2F9 /* Neue Plak Black.ttf */,
+				7ED047D72C4A8F80004DB2F9 /* Neue Plak Bold.ttf */,
+				7ED047D42C4A8F7F004DB2F9 /* Neue Plak Regular.ttf */,
+				7ED047D52C4A8F80004DB2F9 /* Neue Plak SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		7EE6F4172C4A965300A17D77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,8 +288,13 @@
 			buildRules = (
 			);
 			dependencies = (
+				7EE6F4102C4A93C300A17D77 /* PBXTargetDependency */,
 			);
 			name = GrckiKino;
+			packageProductDependencies = (
+				7EE6F40D2C4A933F00A17D77 /* RswiftLibrary */,
+				7EE6F4182C4A965300A17D77 /* rswift */,
+			);
 			productName = GrckiKino;
 			productReference = 7ED047922C4A8026004DB2F9 /* GrckiKino.app */;
 			productType = "com.apple.product-type.application";
@@ -278,6 +323,9 @@
 				Base,
 			);
 			mainGroup = 7ED047892C4A8026004DB2F9;
+			packageReferences = (
+				7EE6F40C2C4A933F00A17D77 /* XCRemoteSwiftPackageReference "R" */,
+			);
 			productRefGroup = 7ED047932C4A8026004DB2F9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -293,7 +341,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ED0479D2C4A8027004DB2F9 /* Preview Assets.xcassets in Resources */,
+				7ED047D82C4A8F80004DB2F9 /* Neue Plak Regular.ttf in Resources */,
+				7ED047DB2C4A8F80004DB2F9 /* Neue Plak Bold.ttf in Resources */,
+				7ED047D92C4A8F80004DB2F9 /* Neue Plak SemiBold.ttf in Resources */,
+				7ED047DA2C4A8F80004DB2F9 /* Neue Plak Black.ttf in Resources */,
 				7ED0479A2C4A8027004DB2F9 /* Assets.xcassets in Resources */,
+				7EE6F41C2C4A9B7000A17D77 /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +359,7 @@
 			files = (
 				7ED047B22C4A883E004DB2F9 /* RoundsRepository.swift in Sources */,
 				7ED047962C4A8026004DB2F9 /* GrckiKinoApp.swift in Sources */,
+				7EE6F4132C4A948800A17D77 /* RSwift+Extensions.swift in Sources */,
 				7ED047BC2C4A88AC004DB2F9 /* SplashCoordinator.swift in Sources */,
 				7ED047C22C4A88DC004DB2F9 /* SplashViewModel.swift in Sources */,
 				7ED047C62C4A8960004DB2F9 /* Injectable.swift in Sources */,
@@ -323,6 +377,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7EE6F4102C4A93C300A17D77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 7EE6F40F2C4A93C300A17D77 /* RswiftGenerateInternalResources */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		7ED0479E2C4A8027004DB2F9 /* Debug */ = {
@@ -455,9 +516,11 @@
 				DEVELOPMENT_TEAM = E5FYD94489;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GrckiKino/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -489,9 +552,11 @@
 				DEVELOPMENT_TEAM = E5FYD94489;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GrckiKino/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -534,6 +599,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7EE6F40C2C4A933F00A17D77 /* XCRemoteSwiftPackageReference "R" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7EE6F40D2C4A933F00A17D77 /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EE6F40C2C4A933F00A17D77 /* XCRemoteSwiftPackageReference "R" */;
+			productName = RswiftLibrary;
+		};
+		7EE6F40F2C4A93C300A17D77 /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EE6F40C2C4A933F00A17D77 /* XCRemoteSwiftPackageReference "R" */;
+			productName = "plugin:RswiftGenerateInternalResources";
+		};
+		7EE6F4182C4A965300A17D77 /* rswift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EE6F40C2C4A933F00A17D77 /* XCRemoteSwiftPackageReference "R" */;
+			productName = rswift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7ED0478A2C4A8026004DB2F9 /* Project object */;
 }
