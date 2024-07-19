@@ -32,6 +32,9 @@
 		7EE6F4132C4A948800A17D77 /* RSwift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6F4122C4A948800A17D77 /* RSwift+Extensions.swift */; };
 		7EE6F4192C4A965300A17D77 /* rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 7EE6F4182C4A965300A17D77 /* rswift */; };
 		7EE6F41C2C4A9B7000A17D77 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE6F41B2C4A9B7000A17D77 /* Launch Screen.storyboard */; };
+		7EE6F41F2C4A9D7600A17D77 /* RoundsListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6F41E2C4A9D7600A17D77 /* RoundsListRow.swift */; };
+		7EE6F4232C4A9F8300A17D77 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7EE6F4222C4A9F8300A17D77 /* Alamofire */; };
+		7EE6F4292C4A9FDA00A17D77 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 7EE6F4282C4A9FDA00A17D77 /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,7 @@
 		7ED047DC2C4A8F9E004DB2F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7EE6F4122C4A948800A17D77 /* RSwift+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RSwift+Extensions.swift"; sourceTree = "<group>"; };
 		7EE6F41B2C4A9B7000A17D77 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		7EE6F41E2C4A9D7600A17D77 /* RoundsListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundsListRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EE6F4232C4A9F8300A17D77 /* Alamofire in Frameworks */,
 				7EE6F40E2C4A933F00A17D77 /* RswiftLibrary in Frameworks */,
+				7EE6F4292C4A9FDA00A17D77 /* SwiftyJSON in Frameworks */,
 				7EE6F4192C4A965300A17D77 /* rswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				7ED047C92C4A8C4E004DB2F9 /* RoundsView.swift */,
+				7EE6F41E2C4A9D7600A17D77 /* RoundsListRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -294,6 +301,8 @@
 			packageProductDependencies = (
 				7EE6F40D2C4A933F00A17D77 /* RswiftLibrary */,
 				7EE6F4182C4A965300A17D77 /* rswift */,
+				7EE6F4222C4A9F8300A17D77 /* Alamofire */,
+				7EE6F4282C4A9FDA00A17D77 /* SwiftyJSON */,
 			);
 			productName = GrckiKino;
 			productReference = 7ED047922C4A8026004DB2F9 /* GrckiKino.app */;
@@ -325,6 +334,8 @@
 			mainGroup = 7ED047892C4A8026004DB2F9;
 			packageReferences = (
 				7EE6F40C2C4A933F00A17D77 /* XCRemoteSwiftPackageReference "R" */,
+				7EE6F4212C4A9F8200A17D77 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				7EE6F4272C4A9FDA00A17D77 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 7ED047932C4A8026004DB2F9 /* Products */;
 			projectDirPath = "";
@@ -373,6 +384,7 @@
 				7ED047B62C4A8860004DB2F9 /* RoundsCoordinator.swift in Sources */,
 				7ED047CC2C4A8C5A004DB2F9 /* RoundsViewModel.swift in Sources */,
 				7ED047D02C4A8E6F004DB2F9 /* UIScreen+Extensions.swift in Sources */,
+				7EE6F41F2C4A9D7600A17D77 /* RoundsListRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,6 +621,22 @@
 				minimumVersion = 7.5.0;
 			};
 		};
+		7EE6F4212C4A9F8200A17D77 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		7EE6F4272C4A9FDA00A17D77 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -626,6 +654,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7EE6F40C2C4A933F00A17D77 /* XCRemoteSwiftPackageReference "R" */;
 			productName = rswift;
+		};
+		7EE6F4222C4A9F8300A17D77 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EE6F4212C4A9F8200A17D77 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		7EE6F4282C4A9FDA00A17D77 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EE6F4272C4A9FDA00A17D77 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -15,6 +15,7 @@ struct GrckiKinoApp: App {
     var body: some Scene {
         WindowGroup {
             coordinator.view
+                .preferredColorScheme(.light)
         }
     }
 }

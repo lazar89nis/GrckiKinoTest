@@ -9,6 +9,8 @@ import Foundation
 
 @Observable class RoundsViewModel {
     
+    var isGameViewPresented = false
+    
     init() {
     }
     
