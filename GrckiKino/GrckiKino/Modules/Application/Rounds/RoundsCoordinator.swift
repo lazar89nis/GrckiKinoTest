@@ -9,7 +9,6 @@ import SwiftUI
 
 protocol RoundsCoordinable: Coordinable {
     var view: AnyView { get }
-    
 }
 
 final class RoundsCoordinator<Dependency>: RoundsCoordinable where Dependency: RoundsInjectable {
@@ -20,15 +19,9 @@ final class RoundsCoordinator<Dependency>: RoundsCoordinable where Dependency: R
         AnyView(
             RoundsView(
                 viewModel: dependency.viewModel
-                //roundsCoordinator: self.roundsCoordinator
             )
         )
     }()
-    
-    /*var roundsCoordinator: RoundsCoordinator {
-        let dependency = RoundsDependency()
-        return RoundsCoordinator(dependency: dependency)
-    }*/
     
     init(dependency: Dependency) {
         self.dependency = dependency

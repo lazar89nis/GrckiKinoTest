@@ -35,6 +35,13 @@
 		7EE6F41F2C4A9D7600A17D77 /* RoundsListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6F41E2C4A9D7600A17D77 /* RoundsListRow.swift */; };
 		7EE6F4232C4A9F8300A17D77 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7EE6F4222C4A9F8300A17D77 /* Alamofire */; };
 		7EE6F4292C4A9FDA00A17D77 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 7EE6F4282C4A9FDA00A17D77 /* SwiftyJSON */; };
+		7EE6F4302C4AA14300A17D77 /* HTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6F42F2C4AA14300A17D77 /* HTTPService.swift */; };
+		7EE6F4322C4AA17E00A17D77 /* HTTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6F4312C4AA17E00A17D77 /* HTTPManager.swift */; };
+		7EE6F4342C4AA27B00A17D77 /* ErrorCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6F4332C4AA27B00A17D77 /* ErrorCases.swift */; };
+		7EE6F4362C4AA34700A17D77 /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6F4352C4AA34700A17D77 /* Round.swift */; };
+		7EE6F4382C4AA3EF00A17D77 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6F4372C4AA3EF00A17D77 /* Parser.swift */; };
+		7EE6F43A2C4ABB8D00A17D77 /* Round+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6F4392C4ABB8D00A17D77 /* Round+Fixture.swift */; };
+		7EE6F43D2C4ABCD900A17D77 /* RoundsListRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6F43C2C4ABCD900A17D77 /* RoundsListRowViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +71,13 @@
 		7EE6F4122C4A948800A17D77 /* RSwift+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RSwift+Extensions.swift"; sourceTree = "<group>"; };
 		7EE6F41B2C4A9B7000A17D77 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		7EE6F41E2C4A9D7600A17D77 /* RoundsListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundsListRow.swift; sourceTree = "<group>"; };
+		7EE6F42F2C4AA14300A17D77 /* HTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPService.swift; sourceTree = "<group>"; };
+		7EE6F4312C4AA17E00A17D77 /* HTTPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPManager.swift; sourceTree = "<group>"; };
+		7EE6F4332C4AA27B00A17D77 /* ErrorCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCases.swift; sourceTree = "<group>"; };
+		7EE6F4352C4AA34700A17D77 /* Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
+		7EE6F4372C4AA3EF00A17D77 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		7EE6F4392C4ABB8D00A17D77 /* Round+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Round+Fixture.swift"; sourceTree = "<group>"; };
+		7EE6F43C2C4ABCD900A17D77 /* RoundsListRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundsListRowViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +136,10 @@
 		7ED047A32C4A8396004DB2F9 /* AppCore */ = {
 			isa = PBXGroup;
 			children = (
+				7EE6F42E2C4AA12F00A17D77 /* HTTPManager */,
 				7ED047D32C4A8F72004DB2F9 /* Fonts */,
 				7ED047CD2C4A8E23004DB2F9 /* Helpers */,
+				7EE6F4372C4AA3EF00A17D77 /* Parser.swift */,
 				7ED047952C4A8026004DB2F9 /* GrckiKinoApp.swift */,
 				7ED047992C4A8027004DB2F9 /* Assets.xcassets */,
 				7ED047A72C4A842B004DB2F9 /* Config.swift */,
@@ -151,6 +167,7 @@
 		7ED047A62C4A83C8004DB2F9 /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
+				7EE6F4392C4ABB8D00A17D77 /* Round+Fixture.swift */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -216,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				7ED047CB2C4A8C5A004DB2F9 /* RoundsViewModel.swift */,
+				7EE6F43C2C4ABCD900A17D77 /* RoundsListRowViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -223,6 +241,7 @@
 		7ED047B02C4A8828004DB2F9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7EE6F4352C4AA34700A17D77 /* Round.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -249,6 +268,7 @@
 				7ED047CE2C4A8E43004DB2F9 /* Extensions */,
 				7ED047C52C4A8960004DB2F9 /* Injectable.swift */,
 				7ED047C72C4A8B01004DB2F9 /* Coordinable.swift */,
+				7EE6F4332C4AA27B00A17D77 /* ErrorCases.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -279,6 +299,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7EE6F42E2C4AA12F00A17D77 /* HTTPManager */ = {
+			isa = PBXGroup;
+			children = (
+				7EE6F42F2C4AA14300A17D77 /* HTTPService.swift */,
+				7EE6F4312C4AA17E00A17D77 /* HTTPManager.swift */,
+			);
+			path = HTTPManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,16 +403,23 @@
 				7ED047BC2C4A88AC004DB2F9 /* SplashCoordinator.swift in Sources */,
 				7ED047C22C4A88DC004DB2F9 /* SplashViewModel.swift in Sources */,
 				7ED047C62C4A8960004DB2F9 /* Injectable.swift in Sources */,
+				7EE6F43A2C4ABB8D00A17D77 /* Round+Fixture.swift in Sources */,
 				7ED047CA2C4A8C4E004DB2F9 /* RoundsView.swift in Sources */,
 				7ED047D22C4A8E96004DB2F9 /* UIWindow+Extensions.swift in Sources */,
 				7ED047C82C4A8B01004DB2F9 /* Coordinable.swift in Sources */,
+				7EE6F43D2C4ABCD900A17D77 /* RoundsListRowViewModel.swift in Sources */,
 				7ED047C42C4A88E6004DB2F9 /* SplashView.swift in Sources */,
 				7ED047B42C4A884E004DB2F9 /* RoundsDependency.swift in Sources */,
 				7ED047A82C4A842B004DB2F9 /* Config.swift in Sources */,
+				7EE6F4382C4AA3EF00A17D77 /* Parser.swift in Sources */,
+				7EE6F4342C4AA27B00A17D77 /* ErrorCases.swift in Sources */,
 				7ED047BE2C4A88B5004DB2F9 /* SplashDependency.swift in Sources */,
 				7ED047B62C4A8860004DB2F9 /* RoundsCoordinator.swift in Sources */,
+				7EE6F4322C4AA17E00A17D77 /* HTTPManager.swift in Sources */,
 				7ED047CC2C4A8C5A004DB2F9 /* RoundsViewModel.swift in Sources */,
+				7EE6F4302C4AA14300A17D77 /* HTTPService.swift in Sources */,
 				7ED047D02C4A8E6F004DB2F9 /* UIScreen+Extensions.swift in Sources */,
+				7EE6F4362C4AA34700A17D77 /* Round.swift in Sources */,
 				7EE6F41F2C4A9D7600A17D77 /* RoundsListRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -533,6 +569,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -569,6 +606,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;

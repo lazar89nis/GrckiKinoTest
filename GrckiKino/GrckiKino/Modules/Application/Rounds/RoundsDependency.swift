@@ -11,7 +11,13 @@ protocol RoundsInjectable: Injectable {
 
 final class RoundsDependency: RoundsInjectable {
     
+    private let roundsRepository: RoundsRepository
+    
+    init() {
+        self.roundsRepository = RoundsWebRepository()
+    }
+    
     var viewModel: RoundsViewModel {
-        RoundsViewModel()
+        RoundsViewModel(repository: roundsRepository)
     }
 }
