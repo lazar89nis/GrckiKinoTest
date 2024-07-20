@@ -32,3 +32,9 @@ import Foundation
         }
     }
 }
+
+class MockResultsViewModel: ResultsViewModel {
+    init() {
+        super.init(repository: MockGameRepository())
+    }
+}

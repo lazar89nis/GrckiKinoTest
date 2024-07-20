@@ -59,3 +59,9 @@ import SwiftUI
         return Utility.formatTimeInterval(difference)
     }
 }
+
+class MockPlayViewModel: PlayViewModel {
+    init() {
+        super.init(selectedRound: Round.fixture())
+    }
+}

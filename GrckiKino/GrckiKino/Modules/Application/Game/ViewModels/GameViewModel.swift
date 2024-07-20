@@ -16,3 +16,9 @@ import Foundation
         self.selectedRound = selectedRound
     }
 }
+
+class MockGameViewModel: GameViewModel {
+    init() {
+        super.init(selectedRound: Round.fixture())
+    }
+}

@@ -33,5 +33,5 @@ struct ResultsView: View {
 }
 
 #Preview {
-    ResultsView(viewModel: ResultsViewModel(repository: GameWebRepository()))
+    ResultsView(viewModel: MockResultsViewModel())
 }

@@ -65,7 +65,7 @@ struct GameView: View {
 
 #Preview {
     NavigationStack {
-        GameView(viewModel: GameViewModel(selectedRound: Round.fixture()),
+        GameView(viewModel: MockGameViewModel(),
                  dependency: GameDependency())
     }
 }

@@ -27,3 +27,9 @@ import Foundation
         winningNumbers = result.winningNumbers
     }
 }
+
+class MockRoundResultViewModel: RoundResultViewModel {
+    init() {
+        super.init(result: Round.fixture())
+    }
+}

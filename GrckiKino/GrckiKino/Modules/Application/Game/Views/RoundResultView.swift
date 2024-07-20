@@ -40,5 +40,5 @@ struct RoundResultView: View {
 }
 
 #Preview {
-    RoundResultView(viewModel: RoundResultViewModel(result: Round.fixture()))
+    RoundResultView(viewModel: MockRoundResultViewModel())
 }

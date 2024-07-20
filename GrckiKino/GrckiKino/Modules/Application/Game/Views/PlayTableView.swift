@@ -52,5 +52,6 @@ struct PlayTableView: View {
 }
 
 #Preview {
-    PlayTableView(viewModel: PlayTableViewModel())
+    PlayTableView(viewModel: MockPlayTableViewModel())
+        .background(R.color.background.color)
 }

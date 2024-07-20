@@ -23,3 +23,10 @@ class PlayTableViewModel {
         }
     }
 }
+
+class MockPlayTableViewModel: PlayTableViewModel {
+    override init() {
+        super.init()
+        selectedNumbers = [1,7,35,80]
+    }
+}

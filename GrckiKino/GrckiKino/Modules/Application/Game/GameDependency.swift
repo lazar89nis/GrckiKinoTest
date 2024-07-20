@@ -37,6 +37,4 @@ final class GameDependency: GameInjectable {
     func resultsViewModel() -> ResultsViewModel {
         ResultsViewModel(repository: gameRepository)
     }
-    
-    
 }

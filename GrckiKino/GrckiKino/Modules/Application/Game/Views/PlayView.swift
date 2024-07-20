@@ -59,7 +59,7 @@ struct PlayView: View {
 }
 
 #Preview {
-    PlayView(viewModel: PlayViewModel(selectedRound: Round.fixture()),
-             playTableViewModel: PlayTableViewModel())
+    PlayView(viewModel: MockPlayViewModel(),
+             playTableViewModel: MockPlayTableViewModel())
     .background(R.color.background.color)
 }
