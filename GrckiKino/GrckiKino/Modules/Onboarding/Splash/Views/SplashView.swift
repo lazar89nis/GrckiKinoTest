@@ -41,7 +41,8 @@ struct SplashView: View {
     }
     
     var logoView: some View {
-        Text("Grcki kino".uppercased())
+        Text("Grcki kino")
+            .textCase(.uppercase)
             .foregroundColor(R.color.textWhite.color)
             .font(R.font.neuePlakBold.font(size: 36))
             .padding(.top, 6)

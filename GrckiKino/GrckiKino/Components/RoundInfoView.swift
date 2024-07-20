@@ -6,6 +6,13 @@
 //
 
 import SwiftUI
+extension String {
+    // Function to return localized string using key and arguments
+    static func localized(key: String, _ arguments: CVarArg...) -> String {
+        let format = NSLocalizedString(key, comment: "")
+        return String(format: format, arguments: arguments)
+    }
+}
 
 struct RoundInfoView: View {
     
@@ -14,8 +21,8 @@ struct RoundInfoView: View {
     
     var body: some View {
         HStack(spacing: 16) {
-            makeBubbleView(infoText: "Draw time: ", valueText: drawTime, hasInfinityWidth: true)
-            makeBubbleView(infoText: "Round: ", valueText: roundId)
+            makeBubbleView(infoText: String.localized(key:"Draw time: "), valueText: drawTime, hasInfinityWidth: true)
+            makeBubbleView(infoText: String.localized(key:"Round: "), valueText: roundId)
         }
         .padding(.horizontal, 16)
         .frame(maxWidth: .infinity)

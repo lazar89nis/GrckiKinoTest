@@ -41,7 +41,8 @@ struct RoundsView: View {
     }
     
     var titleView: some View {
-        Text("Grcki kino".uppercased())
+        Text("Grcki kino")
+            .textCase(.uppercase)
             .font(R.font.neuePlakBold.font(size: 36))
             .foregroundColor(R.color.textWhite.color)
             .multilineTextAlignment(.center)
@@ -49,7 +50,8 @@ struct RoundsView: View {
     }
     
     var infoTextView: some View {
-        Text("Select round to play".uppercased())
+        Text("Select round to play")
+            .textCase(.uppercase)
             .font(R.font.neuePlakBold.font(size: 15))
             .foregroundColor(R.color.textWhite.color)
             .multilineTextAlignment(.center)

@@ -41,7 +41,7 @@ struct PlayTableView: View {
         .toast(isPresenting: $viewModel.showAllSelectedToast){
             AlertToast(displayMode: .banner(.slide),
                        type: .regular,
-                       title: "Maximum number of numbers selected",
+                       title: String.localized(key: "Maximum number of numbers selected"),
                        style: AlertToast.AlertStyle.style(titleFont: R.font.neuePlakRegular.font(size: 15)))
         }
     }
