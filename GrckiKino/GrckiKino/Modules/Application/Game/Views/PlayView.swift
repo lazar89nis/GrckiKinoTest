@@ -36,7 +36,8 @@ struct PlayView: View {
                     
                     Text(viewModel.timeLeft)
                         .font(R.font.neuePlakBold.font(size: 15))
-                        .foregroundColor(R.color.textWhite.color)
+                        .foregroundColor(viewModel.timeLeftProgress < 0.2 ? R.color.lightRed.color : R.color.textWhite.color)
+                        .contentTransition(.numericText())                    
                 }
                 Spacer()
                 HStack(spacing:0) {
@@ -47,6 +48,7 @@ struct PlayView: View {
                     Text("\(playTableViewModel.selectedNumbers.count)")
                         .font(R.font.neuePlakBold.font(size: 15))
                         .foregroundColor(R.color.textWhite.color)
+                        .contentTransition(.numericText())
                 }
             }
             .padding(.horizontal, 16)

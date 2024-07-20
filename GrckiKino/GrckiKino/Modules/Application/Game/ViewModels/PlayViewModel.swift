@@ -5,7 +5,7 @@
 //  Created by Lazar Djordjevic on 20.7.24..
 //
 
-import Foundation
+import SwiftUI
 
 @Observable class PlayViewModel {
     
@@ -33,7 +33,9 @@ import Foundation
         roundId = String(selectedRound.drawId)
         
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
-            self?.timeLeft = self?.calculateTimeLeft() ?? ""
+            withAnimation {
+                self?.timeLeft = self?.calculateTimeLeft() ?? ""
+            }
         }
         
         timer?.fire()
@@ -48,7 +50,7 @@ import Foundation
         
         let difference = selectedRound.drawTimeDate.timeIntervalSince(currentDate)
         
-        timeLeftProgress = max(0,difference/300.0)
+        timeLeftProgress = max(0,min(difference,300)/300.0)
         
         if difference < 0 {
             return "00:00:00"

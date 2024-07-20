@@ -34,8 +34,8 @@ struct GameView: View {
     
     var pickerView: some View {
         Picker("Select View", selection: $viewModel.selectedSegment) {
-            Text("Lottery ticket").tag(0)
-            Text("Draw view").tag(1)
+            Text("Play").tag(0)
+            Text("Live draw").tag(1)
             Text("Results").tag(2)
         }
         .pickerStyle(.segmented)

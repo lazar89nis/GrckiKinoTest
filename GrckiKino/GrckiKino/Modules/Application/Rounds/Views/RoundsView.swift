@@ -63,7 +63,7 @@ struct RoundsView: View {
                 let rowViewModel = RoundsListRowViewModel(round: round)
                 RoundsListRow(viewModel: rowViewModel)
                     .onTapGesture {
-                        if(!rowViewModel.finished) {
+                        if(!rowViewModel.isFinished) {
                             navigationPath.append(round)
                         }
                     }

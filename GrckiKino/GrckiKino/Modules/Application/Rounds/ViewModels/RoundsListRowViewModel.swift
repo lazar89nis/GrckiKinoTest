@@ -15,14 +15,16 @@ import Foundation
 
     var startsAt: String
     var timeLeft: String
-    var finished: Bool
+    var isLowTime: Bool
+    var isFinished: Bool
     
     init(round: Round) {
         self.round = round
         dateFormatter.dateFormat = "HH:mm"
         startsAt = dateFormatter.string(from: round.drawTimeDate)
         timeLeft = ""
-        finished = false
+        isFinished = false
+        isLowTime = false
         
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
             self?.timeLeft = self?.calculateTimeLeft() ?? ""
@@ -40,7 +42,9 @@ import Foundation
         
         let difference = round.drawTimeDate.timeIntervalSince(currentDate)
         
-        finished = difference <= 0
+        isLowTime = difference < 60
+        
+        isFinished = difference <= 0
         
         if difference < 0 {
             return "00:00:00"

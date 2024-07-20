@@ -25,7 +25,9 @@ struct PlayTableView: View {
                     ForEach(1...Config.numberOfBalls, id: \.self) { number in
                         
                         Button(action: {
-                            viewModel.toggleSelection(for: number)
+                            withAnimation {
+                                viewModel.toggleSelection(for: number)
+                            }
                         }) {
                             PlayTableCircle(number: number,
                                             selected: viewModel.selectedNumbers.contains(number),
