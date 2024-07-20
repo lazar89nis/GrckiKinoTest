@@ -8,11 +8,11 @@
 import Foundation
 
 protocol RoundsRepository {
-    func getRounds(gameId: Int) async -> Result<[Round], ErrorCases>
+    func getRounds(gameId: Int) async -> Result<[Round], NetworkError>
 }
 
 struct RoundsWebRepository: RoundsRepository {
-    func getRounds(gameId: Int) async -> Result<[Round], ErrorCases> {
+    func getRounds(gameId: Int) async -> Result<[Round], NetworkError> {
         let result = await HTTPManager.shared.getRounds(gameId: gameId)
         switch result {
             case .success(let data):
@@ -25,7 +25,7 @@ struct RoundsWebRepository: RoundsRepository {
 }
 
 class MockRoundsRepository: RoundsRepository {
-    func getRounds(gameId: Int) async -> Result<[Round], ErrorCases> {
+    func getRounds(gameId: Int) async -> Result<[Round], NetworkError> {
         return .success(Round.activeFixtures(count: 20))
     }
 }

@@ -20,9 +20,8 @@ struct PlayTableCircle: View {
                         AnyShapeStyle(Color.appCircleBackground))
                 .frame(width: buttonSize, height: buttonSize)
             
-            InsettableCircle(insetAmount:4/2)
-                .stroke(Color.white.opacity( selected ? 0.5 : 0.08),
-                        lineWidth: buttonSize*0.1)
+            InsettableCircle(insetAmount:2)
+                .stroke(Color.white.opacity( selected ? 0.5 : 0.08), lineWidth: buttonSize*0.1)
                 .frame(width: buttonSize, height: buttonSize)
             
             Text("\(number)")
@@ -35,10 +34,10 @@ struct PlayTableCircle: View {
 
 #Preview {
     VStack {
-        ForEach(0...Config.circleGradients.count-1, id: \.self) { number in
+        ForEach(0...Config.circleGradients.count-1, id: \.self) { index in
             HStack {
-                PlayTableCircle(number: (number*Config.numberOfGridColumns)+1)
-                PlayTableCircle(number: (number*Config.numberOfGridColumns)+1, selected: true)
+                PlayTableCircle(number: (index * Config.numberOfGridColumns) + 1)
+                PlayTableCircle(number: (index * Config.numberOfGridColumns) + 1, selected: true)
             }
         }
     }

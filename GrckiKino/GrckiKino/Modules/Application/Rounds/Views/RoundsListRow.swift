@@ -18,9 +18,9 @@ struct RoundsListRow: View {
                 .padding(EdgeInsets(top: 18, leading: 16, bottom: 16, trailing: 8))
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            Text(viewModel.isFinished ? "Finished" : "\(viewModel.timeLeft)")
+            Text(viewModel.isFinished ? "Finished" : viewModel.timeLeft)
                 .font(.bodyLargeBold)
-                .foregroundColor(viewModel.isFinished ? .appLightBlueStroke : viewModel.isLowTime ? .appLightRed : .appTextWhite)
+                .foregroundColor(viewModel.isFinished ? .appLightBlueStroke : (viewModel.isLowTime ? .appLightRed : .appTextWhite))
                 .padding(EdgeInsets(top: 18, leading: 0, bottom: 16, trailing: 16))
                 .frame(maxWidth: .infinity, alignment: .trailing)
         }

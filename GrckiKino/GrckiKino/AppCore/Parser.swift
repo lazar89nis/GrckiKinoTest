@@ -10,21 +10,15 @@ import SwiftyJSON
 
 class Parser {
     static func getJSONFromData(_ JSONData: Data?) -> JSON {
-        let json:JSON = {
-            do {
-                if let jsonData = JSONData
-                {
-                    return try JSON(data: jsonData)
-                }
-                return JSON()
-            }
-            catch let error
-            {
-                print(error.localizedDescription)
-                return JSON()
-            }
-        }()
-        return json
+        guard let jsonData = JSONData else {
+            return JSON()
+        }
+        do {
+            return try JSON(data: jsonData)
+        } catch {
+            print("Error parsing JSON: \(error.localizedDescription)")
+            return JSON()
+        }
     }
     
     static func printResponse(JSONData: Data?) {
@@ -33,32 +27,23 @@ class Parser {
     }
     
     static func parseGetRounds(JSONData: Data?) -> [Round] {
-        var rounds: [Round] = []
-        
-        let json:JSON = getJSONFromData(JSONData)
-        
-        for (_,subJson):(String, JSON) in json {
+        let json = getJSONFromData(JSONData)
+        return json.arrayValue.map { subJson in
             let gameId = subJson["gameId"].intValue
             let drawId = subJson["drawId"].intValue
             let drawTime = subJson["drawTime"].intValue
-            rounds.append(Round(gameId: gameId, drawId: drawId, drawTime: drawTime))
+            return Round(gameId: gameId, drawId: drawId, drawTime: drawTime)
         }
-        return rounds
     }
     
     static func parseGetResults(JSONData: Data?) -> [Round] {
-        var rounds: [Round] = []
-        
-        let json:JSON = getJSONFromData(JSONData)
-        
-        for (_,subJson):(String, JSON) in json["content"] {
+        let json = getJSONFromData(JSONData)
+        return json["content"].arrayValue.map { subJson in
             let gameId = subJson["gameId"].intValue
             let drawId = subJson["drawId"].intValue
             let drawTime = subJson["drawTime"].intValue
-            
-            let winningNumbers = subJson["winningNumbers"]["list"].arrayValue.map({$0.intValue})
-            rounds.append(Round(gameId: gameId, drawId: drawId, drawTime: drawTime, winningNumbers: winningNumbers))
+            let winningNumbers = subJson["winningNumbers"]["list"].arrayValue.map { $0.intValue }
+            return Round(gameId: gameId, drawId: drawId, drawTime: drawTime, winningNumbers: winningNumbers)
         }
-        return rounds
     }
 }

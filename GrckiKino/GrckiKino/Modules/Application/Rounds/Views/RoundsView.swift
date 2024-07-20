@@ -32,7 +32,7 @@ struct RoundsView: View {
             .toolbar(.hidden, for: .navigationBar)
             navigationLinks
         }
-        .onAppear() {
+        .onAppear {
             Task {
                 await viewModel.loadRounds()
             }

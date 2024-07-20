@@ -17,15 +17,12 @@ struct RoundResultView: View {
         VStack(spacing: 0) {
             RoundInfoView(drawTime: viewModel.drawTime, roundId: viewModel.roundId)
                 .padding(.top, 16)
+            
             let buttonSize = calculateButtonSize()
-            LazyVGrid(columns: Array(repeating: GridItem(.fixed(buttonSize), 
-                                                         spacing: spacing),
-                                     count: numberOfColumns),
-                      spacing: spacing) {
+            
+            LazyVGrid(columns: Array(repeating: GridItem(.fixed(buttonSize), spacing: spacing), count: numberOfColumns), spacing: spacing) {
                 ForEach(viewModel.winningNumbers, id: \.self) { number in
-                    PlayTableCircle(number: number,
-                                    selected: true,
-                                    buttonSize: buttonSize)
+                    PlayTableCircle(number: number, selected: true, buttonSize: buttonSize)
                 }
             }
             .padding(16)
@@ -35,7 +32,7 @@ struct RoundResultView: View {
     }
     
     func calculateButtonSize() -> CGFloat {
-        return (UIScreen.main.bounds.size.width-64 - CGFloat(Int(spacing) * (numberOfColumns-1))) / CGFloat(numberOfColumns)
+        return (UIScreen.main.bounds.size.width - 64 - CGFloat(Int(spacing) * (numberOfColumns-1))) / CGFloat(numberOfColumns)
     }
 }
 

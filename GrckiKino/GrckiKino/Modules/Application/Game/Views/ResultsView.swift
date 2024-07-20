@@ -23,7 +23,7 @@ struct ResultsView: View {
                 await viewModel.loadResults()
             }
         }
-        .onAppear() {
+        .onAppear {
             Task {
                 await viewModel.loadResults()
             }

@@ -9,7 +9,7 @@ import SwiftUI
 import AlertToast
 
 struct PlayTableView: View {
-    let spacing:CGFloat = 6
+    private let spacing: CGFloat = 6
     @State var viewModel: PlayTableViewModel
     
     var body: some View {
@@ -17,12 +17,9 @@ struct PlayTableView: View {
             let buttonSize = calculateButtonSize(availableSpace: geometry.size.width)
             
             ScrollView {
-                LazyVGrid(columns: Array(repeating: GridItem(.fixed(buttonSize),
-                                                             spacing: spacing),
-                                         count: Config.numberOfGridColumns),
-                          spacing: spacing) {
+                LazyVGrid(columns: Array(repeating: GridItem(.fixed(buttonSize), spacing: spacing),
+                                         count: Config.numberOfGridColumns), spacing: spacing) {
                     ForEach(1...Config.totalNumbers, id: \.self) { number in
-                        
                         Button(action: {
                             withAnimation {
                                 viewModel.toggleSelection(for: number)
@@ -45,8 +42,8 @@ struct PlayTableView: View {
         }
     }
     
-    func calculateButtonSize(availableSpace: CGFloat) -> CGFloat {
-        return (availableSpace - CGFloat(Int(spacing) * (Config.numberOfGridColumns-1))) / CGFloat(Config.numberOfGridColumns)
+    private func calculateButtonSize(availableSpace: CGFloat) -> CGFloat {
+        (availableSpace - CGFloat(Int(spacing) * (Config.numberOfGridColumns - 1))) / CGFloat(Config.numberOfGridColumns)
     }
 }
 

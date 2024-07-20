@@ -51,6 +51,7 @@
       }
     },
     "Finished" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
