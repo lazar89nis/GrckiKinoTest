@@ -9,23 +9,23 @@ import Foundation
 
 class Odd: Hashable, CustomStringConvertible {
     var value: Double
-    var ball: Int
+    var numbersPlayed: Int
     
-    init(value: Double, ball: Int) {
+    init(value: Double, numbersPlayed: Int) {
         self.value = value
-        self.ball = ball
+        self.numbersPlayed = numbersPlayed
     }
     
     static func == (lhs: Odd, rhs: Odd) -> Bool {
-        lhs.value == rhs.value && lhs.ball == rhs.ball
+        lhs.value == rhs.value && lhs.numbersPlayed == rhs.numbersPlayed
     }
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(value)
-        hasher.combine(ball)
+        hasher.combine(numbersPlayed)
     }
         
     var description: String {
-        return "Odd --> value:\(value), ball:\(ball)"
+        return "Odd --> value:\(value), numbersPlayed:\(numbersPlayed)"
     }
 }

@@ -22,7 +22,7 @@ struct PlayTableView: View {
                                                              spacing: spacing),
                                          count: Config.numberOfGridColumns),
                           spacing: spacing) {
-                    ForEach(1...Config.numberOfBalls, id: \.self) { number in
+                    ForEach(1...Config.totalNumbers, id: \.self) { number in
                         
                         Button(action: {
                             withAnimation {
@@ -41,7 +41,7 @@ struct PlayTableView: View {
         .toast(isPresenting: $viewModel.showAllSelectedToast){
             AlertToast(displayMode: .banner(.slide),
                        type: .regular,
-                       title: "Maximum number of balls selected",
+                       title: "Maximum number of numbers selected",
                        style: AlertToast.AlertStyle.style(titleFont: R.font.neuePlakRegular.font(size: 15)))
         }
     }

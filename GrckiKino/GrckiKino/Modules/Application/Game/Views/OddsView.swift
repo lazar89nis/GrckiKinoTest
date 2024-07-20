@@ -24,7 +24,7 @@ struct OddsView: View {
                                 .cornerRadius(8)
                                 .overlay(
                                     InsettableRect(cornerRadius: 6, insetAmount: 1)
-                                        .stroke(selectedNumbers.count == odd.ball ? R.color.oddsStrokeActive.color : R.color.oddsStroke.color, lineWidth: 2)
+                                        .stroke(selectedNumbers.count == odd.numbersPlayed ? R.color.oddsStrokeActive.color : R.color.oddsStroke.color, lineWidth: 2)
                                         .animation(.easeInOut(duration: 0.3), value: selectedNumbers)
                                 )
                             
@@ -34,7 +34,7 @@ struct OddsView: View {
                                 .padding(.horizontal, 8)
                                 .offset(CGSize(width: 0.0, height: -12.0))
                             
-                            Text("\(odd.ball)")
+                            Text("\(odd.numbersPlayed)")
                                 .font(R.font.neuePlakSemiBold.font(size: 12))
                                 .foregroundColor(R.color.textWhite.color)
                                 .padding(.horizontal, 10)

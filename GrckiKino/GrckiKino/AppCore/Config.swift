@@ -13,7 +13,7 @@ class Config {
     static let drawAnimationUrl = "https://www.mozzartbet.com/sr/lotto-animation/26#/"
     static let gameId = 1100
     static let numberOfGridColumns = 8
-    static let numberOfBalls = 80
+    static let totalNumbers = 80
     static let maxNumbersToPlay = 15
     
     static let circleGradients: [LinearGradient] = [

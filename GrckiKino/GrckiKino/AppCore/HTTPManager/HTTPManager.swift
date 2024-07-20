@@ -33,6 +33,21 @@ class HTTPManager {
         }
     }
     
+    func getRound(gameId: Int, drawId: String) async -> Result<Data, ErrorCases> {
+        do {
+            let data = try await self.service.requestWithURL(
+                Config.baseUrl,
+                path: "/\(gameId)/\(drawId)",
+                methodType: .get)
+            return .success(data)
+        } catch {
+            if let er = error as? ErrorCases {
+                return .failure(er)
+            }
+            return .failure(.generalError)
+        }
+    }
+    
     func getResults(gameId: Int, fromDate: String, toDate: String) async -> Result<Data, ErrorCases> {
         do {
             let data = try await self.service.requestWithURL(

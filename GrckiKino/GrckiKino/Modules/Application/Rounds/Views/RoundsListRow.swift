@@ -36,5 +36,5 @@ struct RoundsListRow: View {
 }
 
 #Preview {
-    RoundsListRow(viewModel: RoundsListRowViewModel(round: Round.fixture()))
+    RoundsListRow(viewModel: MockRoundsListRowViewModel())
 }

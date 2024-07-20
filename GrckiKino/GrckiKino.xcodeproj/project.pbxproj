@@ -16,7 +16,7 @@
 		7EBE9C082C4AE05E00C1989F /* LiveDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9C072C4AE05E00C1989F /* LiveDrawView.swift */; };
 		7EBE9C0B2C4AE08900C1989F /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9C0A2C4AE08900C1989F /* ResultsView.swift */; };
 		7EBE9C0D2C4AE0A800C1989F /* PlayTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9C0C2C4AE0A800C1989F /* PlayTableView.swift */; };
-		7EBE9C0F2C4AE14800C1989F /* InsettableCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9C0E2C4AE14800C1989F /* InsettableCircle.swift */; };
+		7EBE9C0F2C4AE14800C1989F /* InsettableShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9C0E2C4AE14800C1989F /* InsettableShapes.swift */; };
 		7EBE9C112C4AE18000C1989F /* PlayTableCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9C102C4AE18000C1989F /* PlayTableCircle.swift */; };
 		7EBE9C132C4B0F2A00C1989F /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9C122C4B0F2A00C1989F /* Utility.swift */; };
 		7EBE9C172C4B1B8100C1989F /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 7EBE9C162C4B1B8100C1989F /* AlertToast */; };
@@ -76,7 +76,7 @@
 		7EBE9C072C4AE05E00C1989F /* LiveDrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDrawView.swift; sourceTree = "<group>"; };
 		7EBE9C0A2C4AE08900C1989F /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		7EBE9C0C2C4AE0A800C1989F /* PlayTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTableView.swift; sourceTree = "<group>"; };
-		7EBE9C0E2C4AE14800C1989F /* InsettableCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsettableCircle.swift; sourceTree = "<group>"; };
+		7EBE9C0E2C4AE14800C1989F /* InsettableShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsettableShapes.swift; sourceTree = "<group>"; };
 		7EBE9C102C4AE18000C1989F /* PlayTableCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTableCircle.swift; sourceTree = "<group>"; };
 		7EBE9C122C4B0F2A00C1989F /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		7EBE9C192C4B398300C1989F /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
@@ -239,7 +239,7 @@
 		7ED047A52C4A83BA004DB2F9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				7EBE9C0E2C4AE14800C1989F /* InsettableCircle.swift */,
+				7EBE9C0E2C4AE14800C1989F /* InsettableShapes.swift */,
 				7EBE9C2C2C4B4D6500C1989F /* RoundInfoView.swift */,
 			);
 			path = Components;
@@ -288,9 +288,9 @@
 				7ED047B02C4A8828004DB2F9 /* Models */,
 				7ED047AF2C4A8820004DB2F9 /* ViewModels */,
 				7ED047AE2C4A8819004DB2F9 /* Views */,
+				7ED047B52C4A8860004DB2F9 /* RoundsCoordinator.swift */,
 				7ED047B12C4A883E004DB2F9 /* RoundsRepository.swift */,
 				7ED047B32C4A884E004DB2F9 /* RoundsDependency.swift */,
-				7ED047B52C4A8860004DB2F9 /* RoundsCoordinator.swift */,
 			);
 			path = Rounds;
 			sourceTree = "<group>";
@@ -301,9 +301,9 @@
 				7EBE9BFA2C4AD05600C1989F /* Views */,
 				7EBE9BF92C4AD04F00C1989F /* ViewModels */,
 				7EBE9BF82C4AD04600C1989F /* Models */,
+				7EBE9BFF2C4AD08100C1989F /* GameCoordinator.swift */,
 				7EBE9BFB2C4AD06A00C1989F /* GameRepository.swift */,
 				7EBE9BFD2C4AD07500C1989F /* GameDependency.swift */,
-				7EBE9BFF2C4AD08100C1989F /* GameCoordinator.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -509,7 +509,7 @@
 				7ED047D22C4A8E96004DB2F9 /* UIWindow+Extensions.swift in Sources */,
 				7ED047C82C4A8B01004DB2F9 /* Coordinable.swift in Sources */,
 				7EE6F43D2C4ABCD900A17D77 /* RoundsListRowViewModel.swift in Sources */,
-				7EBE9C0F2C4AE14800C1989F /* InsettableCircle.swift in Sources */,
+				7EBE9C0F2C4AE14800C1989F /* InsettableShapes.swift in Sources */,
 				7EBE9C082C4AE05E00C1989F /* LiveDrawView.swift in Sources */,
 				7ED047C42C4A88E6004DB2F9 /* SplashView.swift in Sources */,
 				7ED047B42C4A884E004DB2F9 /* RoundsDependency.swift in Sources */,
