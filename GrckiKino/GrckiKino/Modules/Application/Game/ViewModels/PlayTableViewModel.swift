@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-@Observable
-class PlayTableViewModel {
-    
+@Observable class PlayTableViewModel {
     var selectedNumbers: Set<Int> = []
     var showAllSelectedToast = false
     

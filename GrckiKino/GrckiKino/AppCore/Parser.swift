@@ -43,7 +43,6 @@ class Parser {
             let drawTime = subJson["drawTime"].intValue
             rounds.append(Round(gameId: gameId, drawId: drawId, drawTime: drawTime))
         }
-        
         return rounds
     }
     
@@ -60,7 +59,6 @@ class Parser {
             let winningNumbers = subJson["winningNumbers"]["list"].arrayValue.map({$0.intValue})
             rounds.append(Round(gameId: gameId, drawId: drawId, drawTime: drawTime, winningNumbers: winningNumbers))
         }
-        
         return rounds
     }
 }

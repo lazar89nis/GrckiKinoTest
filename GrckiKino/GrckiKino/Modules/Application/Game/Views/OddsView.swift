@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct OddsView: View {
-    
     var odds:[Odd]
     @Binding var selectedNumbers: Set<Int>
     
@@ -20,23 +19,23 @@ struct OddsView: View {
                         ZStack(alignment: .center) {
                             Rectangle()
                                 .frame(height: 60)
-                                .foregroundColor(R.color.oddsBubbleBg.color)
+                                .foregroundColor(.appOddsBubbleBg)
                                 .cornerRadius(8)
                                 .overlay(
                                     InsettableRect(cornerRadius: 6, insetAmount: 1)
-                                        .stroke(selectedNumbers.count == odd.numbersPlayed ? R.color.oddsStrokeActive.color : R.color.oddsStroke.color, lineWidth: 2)
+                                        .stroke(selectedNumbers.count == odd.numbersPlayed ? Color.appOddsStrokeActive : Color.appOddsStroke, lineWidth: 2)
                                         .animation(.easeInOut(duration: 0.3), value: selectedNumbers)
                                 )
                             
                             Text(format(odd.value))
-                                .font(R.font.neuePlakBold.font(size: 14))
-                                .foregroundColor(R.color.textWhite.color)
+                                .font(.bodyMedium)
+                                .foregroundColor(.appTextWhite)
                                 .padding(.horizontal, 8)
                                 .offset(CGSize(width: 0.0, height: -12.0))
                             
                             Text("\(odd.numbersPlayed)")
-                                .font(R.font.neuePlakSemiBold.font(size: 12))
-                                .foregroundColor(R.color.textWhite.color)
+                                .font(.caption)
+                                .foregroundColor(.appTextWhite)
                                 .padding(.horizontal, 10)
                                 .padding(.top, 3)
                                 .padding(.bottom, 2)
@@ -70,5 +69,5 @@ struct OddsView: View {
 
 #Preview {
     OddsView(odds: Odd.fixtures(), selectedNumbers: .constant([3]))
-    .background(R.color.background.color)
+    .background(Color.appBackground)
 }

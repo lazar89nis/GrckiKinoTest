@@ -7,12 +7,11 @@
 
 import Foundation
 
-class Round: Hashable, CustomStringConvertible {
-    var gameId: Int
-    var drawId: Int
-    var drawTime: Int
-    var drawTimeDate: Date
-    
+struct Round: Hashable, CustomStringConvertible {
+    let gameId: Int
+    let drawId: Int
+    let drawTime: Int
+    let drawTimeDate: Date
     let winningNumbers: [Int]
     
     init(gameId: Int, drawId: Int, drawTime: Int, winningNumbers: [Int] = []) {

@@ -6,16 +6,8 @@
 //
 
 import SwiftUI
-extension String {
-    // Function to return localized string using key and arguments
-    static func localized(key: String, _ arguments: CVarArg...) -> String {
-        let format = NSLocalizedString(key, comment: "")
-        return String(format: format, arguments: arguments)
-    }
-}
 
 struct RoundInfoView: View {
-    
     var drawTime:String
     var roundId:String
     
@@ -31,18 +23,18 @@ struct RoundInfoView: View {
     func makeBubbleView(infoText: String, valueText: String, hasInfinityWidth: Bool = false) -> some View {
         HStack(spacing: 0) {
             Text(infoText)
-                .font(R.font.neuePlakSemiBold.font(size: 13))
-                .foregroundColor(R.color.textWhite.color.opacity(0.8))
+                .font(.bodySmall)
+                .foregroundColor(.appTextWhite.opacity(0.8))
             
             Text(valueText)
-                .font(R.font.neuePlakBold.font(size: 13))
-                .foregroundColor(R.color.textWhite.color)
+                .font(.bodySmallBold)
+                .foregroundColor(.appTextWhite)
             
         }
         .frame(maxWidth: hasInfinityWidth ? .infinity : nil)
         .padding(.vertical, 12)
         .padding(.horizontal, 12)
-        .background(R.color.toolbarBackground.color)
+        .background(Color.appToolbarBackground)
         .cornerRadius(10)
         .overlay(
             RoundedRectangle(cornerRadius: 10)
@@ -56,5 +48,5 @@ struct RoundInfoView: View {
         RoundInfoView(drawTime: "07-20 03:55", roundId: "1107537")
     }
     .padding(.vertical, 20)
-    .background(R.color.background.color)        
+    .background(Color.appBackground)        
 }

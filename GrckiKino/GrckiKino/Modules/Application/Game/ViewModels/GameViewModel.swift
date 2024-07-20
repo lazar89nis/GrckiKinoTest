@@ -8,7 +8,6 @@
 import Foundation
 
 @Observable class GameViewModel {
-    
     var selectedRound: Round
     var selectedSegment = 0
     

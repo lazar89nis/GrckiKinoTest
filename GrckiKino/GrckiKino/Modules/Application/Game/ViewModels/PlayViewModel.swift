@@ -8,25 +8,19 @@
 import SwiftUI
 
 @Observable class PlayViewModel {
-    
-    private var timer: Timer?
-    private let dateFormatter = DateFormatter()
-    
-    var selectedRound: Round
-    
     var drawTime: String
     var roundId: String
-    
     var timeLeft: String
-    
     var timeLeftProgress = 0.0
-    
     var odds: [Odd] = Odd.fixtures()
+    
+    private var timer: Timer?
+    private let selectedRound: Round
+    private let dateFormatter = DateFormatter.formatter(withStyle: .monthDayHourMinute)
     
     init(selectedRound: Round) {
         self.selectedRound = selectedRound
         
-        dateFormatter.dateFormat = "MM-dd HH:mm"
         drawTime = dateFormatter.string(from: selectedRound.drawTimeDate)
         timeLeft = ""
         
@@ -37,7 +31,6 @@ import SwiftUI
                 self?.timeLeft = self?.calculateTimeLeft() ?? ""
             }
         }
-        
         timer?.fire()
     }
     
@@ -47,16 +40,11 @@ import SwiftUI
     
     func calculateTimeLeft() -> String {
         let currentDate = Date()
-        
         let difference = selectedRound.drawTimeDate.timeIntervalSince(currentDate)
         
         timeLeftProgress = max(0,min(difference,300)/300.0)
         
-        if difference < 0 {
-            return "00:00:00"
-        }
-        
-        return Utility.formatTimeInterval(difference)
+        return difference < 0 ? "00:00:00" : Utility.formatTimeInterval(difference)
     }
 }
 

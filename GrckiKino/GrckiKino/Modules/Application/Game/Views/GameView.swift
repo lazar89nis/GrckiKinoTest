@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct GameView: View {
-    
     @State var viewModel: GameViewModel
     let dependency: GameInjectable
     
@@ -24,12 +23,12 @@ struct GameView: View {
         .navigationTitle("Round \(String(viewModel.selectedRound.drawId))")
         .navigationBarTitleDisplayMode(.inline)
         .toolbarColorScheme(.dark, for: .navigationBar)
-        .toolbarBackground(R.color.toolbarBackground.color, for: .navigationBar)
+        .toolbarBackground(Color.appToolbarBackground, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
     }
     
     var bgView: some View {
-        R.color.background.color.edgesIgnoringSafeArea(.all)
+        Color.appBackground.edgesIgnoringSafeArea(.all)
     }
     
     var pickerView: some View {

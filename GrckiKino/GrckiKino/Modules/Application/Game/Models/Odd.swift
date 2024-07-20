@@ -7,9 +7,9 @@
 
 import Foundation
 
-class Odd: Hashable, CustomStringConvertible {
-    var value: Double
-    var numbersPlayed: Int
+struct Odd: Hashable, CustomStringConvertible {
+    let value: Double
+    let numbersPlayed: Int
     
     init(value: Double, numbersPlayed: Int) {
         self.value = value

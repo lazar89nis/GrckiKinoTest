@@ -17,7 +17,7 @@ struct PlayTableCircle: View {
             Circle()
                 .fill(selected ?
                       AnyShapeStyle(Config.circleGradients[Utility.getGradientIndex(number: number)]) :
-                        AnyShapeStyle(R.color.circleBackground.color))
+                        AnyShapeStyle(Color.appCircleBackground))
                 .frame(width: buttonSize, height: buttonSize)
             
             InsettableCircle(insetAmount:4/2)
@@ -28,7 +28,7 @@ struct PlayTableCircle: View {
             Text("\(number)")
                 .padding(EdgeInsets(top: 2, leading: 0, bottom: 0, trailing: 0))
                 .font(R.font.neuePlakBold.font(size: buttonSize/2.5))
-                .foregroundColor(R.color.textWhite.color)
+                .foregroundColor(.appTextWhite)
         }
     }
 }

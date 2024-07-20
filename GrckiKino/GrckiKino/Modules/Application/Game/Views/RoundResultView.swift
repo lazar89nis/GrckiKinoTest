@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RoundResultView: View {
     let numberOfColumns = 5
-    let spacing:CGFloat = 16
+    let spacing: CGFloat = 16
     
     @State var viewModel: RoundResultViewModel
     
@@ -30,7 +30,7 @@ struct RoundResultView: View {
             }
             .padding(16)
         }
-        .background(R.color.rowBackground.color)
+        .background(Color.appRowBackground)
         .cornerRadius(10)
     }
     
@@ -41,4 +41,5 @@ struct RoundResultView: View {
 
 #Preview {
     RoundResultView(viewModel: MockRoundResultViewModel())
+        .padding(.horizontal, 16)
 }

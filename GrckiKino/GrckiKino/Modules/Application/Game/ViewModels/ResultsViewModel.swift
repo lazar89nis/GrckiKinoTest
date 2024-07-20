@@ -8,17 +8,16 @@
 import Foundation
 
 @Observable class ResultsViewModel {
-    private var repository: GameRepository
-    
     var results: [Round] = []
+    
+    private let repository: GameRepository
     
     init(repository: GameRepository) {
         self.repository = repository
     }
     
     func loadResults() async  {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dateFormatter = DateFormatter.formatter(withStyle: .jsonSimplified)
         let nowStr = dateFormatter.string(from: Date())
         
         let res = await repository.getResults(gameId: Config.gameId, fromDate: nowStr, toDate: nowStr)

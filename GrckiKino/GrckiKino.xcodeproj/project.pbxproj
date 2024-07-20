@@ -65,6 +65,10 @@
 		7EE6F43A2C4ABB8D00A17D77 /* Round+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6F4392C4ABB8D00A17D77 /* Round+Fixture.swift */; };
 		7EE6F43D2C4ABCD900A17D77 /* RoundsListRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6F43C2C4ABCD900A17D77 /* RoundsListRowViewModel.swift */; };
 		7EF34E4B2C4C56EA001EFFB9 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7EF34E4A2C4C56EA001EFFB9 /* Localizable.xcstrings */; };
+		7EF34E4F2C4C6390001EFFB9 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF34E4E2C4C6390001EFFB9 /* String+Extensions.swift */; };
+		7EF34E522C4C6C93001EFFB9 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF34E512C4C6C93001EFFB9 /* DateFormatter+Extensions.swift */; };
+		7EF34E552C4C6F76001EFFB9 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF34E542C4C6F76001EFFB9 /* Font+Extensions.swift */; };
+		7EF34E572C4C7162001EFFB9 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF34E562C4C7162001EFFB9 /* Color+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +127,10 @@
 		7EE6F4392C4ABB8D00A17D77 /* Round+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Round+Fixture.swift"; sourceTree = "<group>"; };
 		7EE6F43C2C4ABCD900A17D77 /* RoundsListRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundsListRowViewModel.swift; sourceTree = "<group>"; };
 		7EF34E4A2C4C56EA001EFFB9 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		7EF34E4E2C4C6390001EFFB9 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		7EF34E512C4C6C93001EFFB9 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		7EF34E542C4C6F76001EFFB9 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
+		7EF34E562C4C7162001EFFB9 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +379,10 @@
 				7ED047CF2C4A8E6F004DB2F9 /* UIScreen+Extensions.swift */,
 				7ED047D12C4A8E96004DB2F9 /* UIWindow+Extensions.swift */,
 				7EE6F4122C4A948800A17D77 /* RSwift+Extensions.swift */,
+				7EF34E4E2C4C6390001EFFB9 /* String+Extensions.swift */,
+				7EF34E512C4C6C93001EFFB9 /* DateFormatter+Extensions.swift */,
+				7EF34E542C4C6F76001EFFB9 /* Font+Extensions.swift */,
+				7EF34E562C4C7162001EFFB9 /* Color+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -494,8 +506,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EBE9C132C4B0F2A00C1989F /* Utility.swift in Sources */,
+				7EF34E522C4C6C93001EFFB9 /* DateFormatter+Extensions.swift in Sources */,
 				7ED047B22C4A883E004DB2F9 /* RoundsRepository.swift in Sources */,
 				7ED047962C4A8026004DB2F9 /* GrckiKinoApp.swift in Sources */,
+				7EF34E572C4C7162001EFFB9 /* Color+Extensions.swift in Sources */,
 				7EE6F4132C4A948800A17D77 /* RSwift+Extensions.swift in Sources */,
 				7EBE9C052C4ADEBE00C1989F /* GameViewModel.swift in Sources */,
 				7EBE9C302C4B536F00C1989F /* ResultsViewModel.swift in Sources */,
@@ -510,6 +524,7 @@
 				7EE6F43A2C4ABB8D00A17D77 /* Round+Fixture.swift in Sources */,
 				7ED047CA2C4A8C4E004DB2F9 /* RoundsView.swift in Sources */,
 				7E876E922C4BDA7300784B9D /* OddsView.swift in Sources */,
+				7EF34E552C4C6F76001EFFB9 /* Font+Extensions.swift in Sources */,
 				7EBE9C0B2C4AE08900C1989F /* ResultsView.swift in Sources */,
 				7ED047D22C4A8E96004DB2F9 /* UIWindow+Extensions.swift in Sources */,
 				7ED047C82C4A8B01004DB2F9 /* Coordinable.swift in Sources */,
@@ -535,6 +550,7 @@
 				7EBE9BFE2C4AD07500C1989F /* GameDependency.swift in Sources */,
 				7EBE9BFC2C4AD06A00C1989F /* GameRepository.swift in Sources */,
 				7EBE9C272C4B44C400C1989F /* PlayTableViewModel.swift in Sources */,
+				7EF34E4F2C4C6390001EFFB9 /* String+Extensions.swift in Sources */,
 				7EBE9C2D2C4B4D6500C1989F /* RoundInfoView.swift in Sources */,
 				7EE6F4362C4AA34700A17D77 /* Round.swift in Sources */,
 				7EE6F41F2C4A9D7600A17D77 /* RoundsListRow.swift in Sources */,

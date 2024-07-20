@@ -8,19 +8,16 @@
 import Foundation
 
 @Observable class RoundResultViewModel {
-    
-    private var result: Round
-    private let dateFormatter = DateFormatter()
-    
     var drawTime: String
     var roundId: String
-    
     let winningNumbers: [Int]
+    
+    private let result: Round
+    private let dateFormatter = DateFormatter.formatter(withStyle: .monthDayHourMinute)
     
     init(result: Round) {
         self.result = result
-        
-        dateFormatter.dateFormat = "MM-dd HH:mm"
+    
         drawTime = dateFormatter.string(from: result.drawTimeDate)
         
         roundId = String(result.drawId)

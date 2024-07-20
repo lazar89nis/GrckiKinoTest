@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct RoundsView: View {
-    
     @State var viewModel: RoundsViewModel
-    
     let coordinator: RoundsCoordinable
+    
     @State private var navigationPath = NavigationPath()
     
     var body: some View {
@@ -28,7 +27,7 @@ struct RoundsView: View {
                         }
                     }
             }
-            .background(R.color.background.color)
+            .background(Color.appBackground)
             .navigationTitle("Rounds")
             .toolbar(.hidden, for: .navigationBar)
             navigationLinks
@@ -43,8 +42,8 @@ struct RoundsView: View {
     var titleView: some View {
         Text("Grcki kino")
             .textCase(.uppercase)
-            .font(R.font.neuePlakBold.font(size: 36))
-            .foregroundColor(R.color.textWhite.color)
+            .font(.title)
+            .foregroundColor(.appTextWhite)
             .multilineTextAlignment(.center)
             .padding(.horizontal, 16)
     }
@@ -52,8 +51,8 @@ struct RoundsView: View {
     var infoTextView: some View {
         Text("Select round to play")
             .textCase(.uppercase)
-            .font(R.font.neuePlakBold.font(size: 15))
-            .foregroundColor(R.color.textWhite.color)
+            .font(.bodyRegularBold)
+            .foregroundColor(.appTextWhite)
             .multilineTextAlignment(.center)
             .padding(EdgeInsets(top: 16, leading: 16, bottom: 0, trailing: 16))
     }
@@ -81,15 +80,15 @@ struct RoundsView: View {
     var listHeader: some View {
         HStack {
             Text("Starts at")
-                .font(R.font.neuePlakRegular.font(size: 16))
-                .foregroundColor(R.color.textWhite.color)
+                .font(.bodyLarge)
+                .foregroundColor(.appTextWhite)
                 .multilineTextAlignment(.center)
                 .padding(.leading, 0)
             
             Spacer()
             Text("Time left")
-                .font(R.font.neuePlakRegular.font(size: 16))
-                .foregroundColor(R.color.textWhite.color)
+                .font(.bodyLarge)
+                .foregroundColor(.appTextWhite)
                 .multilineTextAlignment(.center)
                 .padding(.trailing, 0)
         }

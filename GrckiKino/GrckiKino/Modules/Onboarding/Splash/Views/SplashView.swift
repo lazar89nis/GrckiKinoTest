@@ -23,6 +23,12 @@ struct SplashView: View {
             }
     }
     
+    var rootView: some View {
+        NavigationStack {
+            view(forState: viewModel.state)
+        }
+    }
+    
     var launchView: some View {
         ZStack(alignment: .top) {
             backgroundView.edgesIgnoringSafeArea(.all)
@@ -37,21 +43,15 @@ struct SplashView: View {
     }
     
     var backgroundView: some View {
-        Color(R.color.background)
+        Color.appBackground
     }
     
     var logoView: some View {
         Text("Grcki kino")
             .textCase(.uppercase)
-            .foregroundColor(R.color.textWhite.color)
-            .font(R.font.neuePlakBold.font(size: 36))
+            .foregroundColor(.appTextWhite)
+            .font(.title)
             .padding(.top, 6)
-    }
-    
-    var rootView: some View {
-        NavigationStack {
-            view(forState: viewModel.state)
-        }
     }
     
     @ViewBuilder

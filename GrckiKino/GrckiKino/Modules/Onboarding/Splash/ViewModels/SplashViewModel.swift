@@ -24,10 +24,6 @@ enum AppState {
 }
 
 class MockSplashViewModel: SplashViewModel {
-    override init() {
-        super.init()
-    }
-    
     init(state: AppState) {
         super.init()
         self.state = state

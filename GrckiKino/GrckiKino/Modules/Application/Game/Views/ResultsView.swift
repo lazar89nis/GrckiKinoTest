@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ResultsView: View {
-    
     @State var viewModel: ResultsViewModel
     
     var body: some View {

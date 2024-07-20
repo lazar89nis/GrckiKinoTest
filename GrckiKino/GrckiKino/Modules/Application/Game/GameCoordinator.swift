@@ -12,9 +12,13 @@ protocol GameCoordinable: Coordinable {
 }
 
 final class GameCoordinator<Dependency>: GameCoordinable where Dependency: GameInjectable {
-    
     private let dependency: Dependency
     private let round: Round
+    
+    init(dependency: Dependency, round: Round) {
+        self.dependency = dependency
+        self.round = round
+    }
     
     lazy var view: AnyView = {
         AnyView(
@@ -22,9 +26,4 @@ final class GameCoordinator<Dependency>: GameCoordinable where Dependency: GameI
                      dependency: dependency)
         )
     }()
-    
-    init(dependency: Dependency, round: Round) {
-        self.dependency = dependency
-        self.round = round
-    }
 }

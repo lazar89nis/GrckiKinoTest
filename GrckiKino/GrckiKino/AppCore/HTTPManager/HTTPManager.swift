@@ -9,7 +9,6 @@ import Foundation
 import Alamofire
 
 class HTTPManager {
-    
     private var service: HTTPService!
     
     static let shared: HTTPManager = {

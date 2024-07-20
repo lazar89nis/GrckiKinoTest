@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct PlayView: View {
-    
     @State var viewModel: PlayViewModel
     @State var playTableViewModel: PlayTableViewModel
     
@@ -26,40 +25,40 @@ struct PlayView: View {
         VStack {
             ProgressView(value: 1-viewModel.timeLeftProgress)
                 .progressViewStyle(LinearProgressViewStyle())
-                .tint(viewModel.timeLeftProgress < 0.2 ? R.color.lightRed.color : R.color.lightBlueStroke.color)
+                .tint(viewModel.timeLeftProgress < 0.2 ? .appLightRed : .appLightBlueStroke)
             
             HStack(spacing:0)  {
                 HStack(spacing:0) {
                     Text("Time left: ")
-                        .font(R.font.neuePlakRegular.font(size: 15))
-                        .foregroundColor(R.color.textWhite.color)
+                        .font(.bodyRegular)
+                        .foregroundColor(.appTextWhite)
                     
                     Text(viewModel.timeLeft)
-                        .font(R.font.neuePlakBold.font(size: 15))
-                        .foregroundColor(viewModel.timeLeftProgress < 0.2 ? R.color.lightRed.color : R.color.textWhite.color)
+                        .font(.bodyRegularBold)
+                        .foregroundColor(viewModel.timeLeftProgress < 0.2 ? .appLightRed : .appTextWhite)
                         .contentTransition(.numericText())                    
                 }
                 Spacer()
                 HStack(spacing:0) {
                     Text("Selected: ")
-                        .font(R.font.neuePlakRegular.font(size: 15))
-                        .foregroundColor(R.color.textWhite.color)
+                        .font(.bodyRegular)
+                        .foregroundColor(.appTextWhite)
                     
                     Text("\(playTableViewModel.selectedNumbers.count)")
-                        .font(R.font.neuePlakBold.font(size: 15))
-                        .foregroundColor(R.color.textWhite.color)
+                        .font(.bodyRegularBold)
+                        .foregroundColor(.appTextWhite)
                         .contentTransition(.numericText())
                 }
             }
             .padding(.horizontal, 16)
             .padding(.vertical, 8)
         }
-        .background(R.color.footerBackground.color)
+        .background(Color.appFooterBackground)
     }
 }
 
 #Preview {
     PlayView(viewModel: MockPlayViewModel(),
              playTableViewModel: MockPlayTableViewModel())
-    .background(R.color.background.color)
+    .background(Color.appBackground)
 }

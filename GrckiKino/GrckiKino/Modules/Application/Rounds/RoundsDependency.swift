@@ -10,7 +10,6 @@ protocol RoundsInjectable: Injectable {
 }
 
 final class RoundsDependency: RoundsInjectable {
-    
     private let roundsRepository: RoundsRepository
     
     init() {

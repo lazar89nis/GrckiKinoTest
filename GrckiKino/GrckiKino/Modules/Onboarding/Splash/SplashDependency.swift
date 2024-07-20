@@ -12,7 +12,6 @@ protocol SplashInjectable: Injectable {
 }
 
 final class SplashDependency: SplashInjectable {
-    
     var viewModel: SplashViewModel {
         SplashViewModel()
     }

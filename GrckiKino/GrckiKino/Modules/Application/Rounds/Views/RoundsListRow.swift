@@ -8,28 +8,27 @@
 import SwiftUI
 
 struct RoundsListRow: View {
-    
-    var viewModel: RoundsListRowViewModel
+    @State var viewModel: RoundsListRowViewModel
         
     var body: some View {
         HStack(spacing: 0) {
             Text("\(viewModel.startsAt)")
-                .font(R.font.neuePlakBold.font(size: 16))
-                .foregroundColor(R.color.textWhite.color)
+                .font(.bodyLargeBold)
+                .foregroundColor(.appTextWhite)
                 .padding(EdgeInsets(top: 18, leading: 16, bottom: 16, trailing: 8))
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             Text(viewModel.isFinished ? "Finished" : "\(viewModel.timeLeft)")
-                .font(R.font.neuePlakBold.font(size: 16))
-                .foregroundColor(viewModel.isFinished ? R.color.lightBlueStroke.color : viewModel.isLowTime ? R.color.lightRed.color : R.color.textWhite.color)
+                .font(.bodyLargeBold)
+                .foregroundColor(viewModel.isFinished ? .appLightBlueStroke : viewModel.isLowTime ? .appLightRed : .appTextWhite)
                 .padding(EdgeInsets(top: 18, leading: 0, bottom: 16, trailing: 16))
                 .frame(maxWidth: .infinity, alignment: .trailing)
         }
-        .background(R.color.rowBackground.color)
+        .background(Color.appRowBackground)
         .cornerRadius(8)
         .overlay(
             RoundedRectangle(cornerRadius: 8)
-                .stroke(R.color.lightBlueStroke.color, lineWidth: viewModel.isFinished ? 3 : 0)
+                .stroke(Color.appLightBlueStroke, lineWidth: viewModel.isFinished ? 3 : 0)
         )
         .padding(1.5)
     }

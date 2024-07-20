@@ -9,7 +9,6 @@ import Foundation
 import Alamofire
 
 class HTTPService {
-    
     private let session: Session
     
     init(session: Session) {

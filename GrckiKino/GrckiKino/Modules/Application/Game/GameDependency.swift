@@ -15,7 +15,6 @@ protocol GameInjectable: Injectable {
 }
 
 final class GameDependency: GameInjectable {
-    
     private let gameRepository: GameRepository
     
     init() {

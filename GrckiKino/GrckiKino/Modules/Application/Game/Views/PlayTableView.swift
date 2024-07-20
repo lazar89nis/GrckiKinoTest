@@ -10,7 +10,6 @@ import AlertToast
 
 struct PlayTableView: View {
     let spacing:CGFloat = 6
-        
     @State var viewModel: PlayTableViewModel
     
     var body: some View {
@@ -42,7 +41,7 @@ struct PlayTableView: View {
             AlertToast(displayMode: .banner(.slide),
                        type: .regular,
                        title: String.localized(key: "Maximum number of numbers selected"),
-                       style: AlertToast.AlertStyle.style(titleFont: R.font.neuePlakRegular.font(size: 15)))
+                       style: AlertToast.AlertStyle.style(titleFont: .bodyRegular))
         }
     }
     
@@ -53,5 +52,5 @@ struct PlayTableView: View {
 
 #Preview {
     PlayTableView(viewModel: MockPlayTableViewModel())
-        .background(R.color.background.color)
+        .background(Color.appBackground)
 }

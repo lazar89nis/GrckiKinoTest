@@ -9,7 +9,6 @@ import SwiftUI
 
 @main
 struct GrckiKinoApp: App {
-    
     let coordinator = SplashCoordinator(dependency: SplashDependency())
     
     init() {

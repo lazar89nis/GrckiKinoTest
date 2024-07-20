@@ -8,12 +8,11 @@
 import Foundation
 
 @Observable class RoundsViewModel {
-        
     var isGameViewPresented = false
     var selectedRound: Round?
-    
     var rounds: [Round] = []
-    private var repository: RoundsRepository
+    
+    private let repository: RoundsRepository
     
     init(repository: RoundsRepository) {
         self.repository = repository

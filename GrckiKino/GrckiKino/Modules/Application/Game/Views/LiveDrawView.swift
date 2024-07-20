@@ -15,7 +15,6 @@ struct LiveDrawView: View {
 }
 
 struct WebView: UIViewRepresentable {
-    
     let webView: WKWebView
     
     init() {
