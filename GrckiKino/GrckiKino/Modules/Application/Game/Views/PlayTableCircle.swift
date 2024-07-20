@@ -26,7 +26,7 @@ struct PlayTableCircle: View {
                 .frame(width: buttonSize, height: buttonSize)
             
             Text("\(number)")
-                .padding(EdgeInsets(top: 2, leading: 0, bottom: 0, trailing: 0))
+                .padding(.top, 2)
                 .font(R.font.neuePlakBold.font(size: buttonSize/2.5))
                 .foregroundColor(.appTextWhite)
         }

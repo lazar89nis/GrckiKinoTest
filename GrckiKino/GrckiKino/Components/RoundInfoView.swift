@@ -32,8 +32,7 @@ struct RoundInfoView: View {
             
         }
         .frame(maxWidth: hasInfinityWidth ? .infinity : nil)
-        .padding(.vertical, 12)
-        .padding(.horizontal, 12)
+        .padding(12)
         .background(Color.appToolbarBackground)
         .cornerRadius(10)
         .overlay(

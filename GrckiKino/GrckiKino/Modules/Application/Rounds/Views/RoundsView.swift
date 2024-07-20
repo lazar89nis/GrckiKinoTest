@@ -82,15 +82,12 @@ struct RoundsView: View {
             Text("Starts at")
                 .font(.bodyLarge)
                 .foregroundColor(.appTextWhite)
-                .multilineTextAlignment(.center)
-                .padding(.leading, 0)
-            
+                .multilineTextAlignment(.center)            
             Spacer()
             Text("Time left")
                 .font(.bodyLarge)
                 .foregroundColor(.appTextWhite)
                 .multilineTextAlignment(.center)
-                .padding(.trailing, 0)
         }
         .padding(.horizontal, 32)
     }
