@@ -25,6 +25,7 @@ struct OddsView: View {
                                 .overlay(
                                     InsettableRect(cornerRadius: 6, insetAmount: 1)
                                         .stroke(selectedNumbers.count == odd.ball ? R.color.oddsStrokeActive.color : R.color.oddsStroke.color, lineWidth: 2)
+                                        .animation(.easeInOut(duration: 0.3), value: selectedNumbers)
                                 )
                             
                             Text(format(odd.value))
@@ -48,6 +49,7 @@ struct OddsView: View {
                 }
                 .padding(.horizontal, 8)
             }
+            .scrollIndicators(.hidden)
             .onChange(of: selectedNumbers) { newValue, _ in
                 if newValue.count > 0 && newValue.count < odds.count {
                     withAnimation {
