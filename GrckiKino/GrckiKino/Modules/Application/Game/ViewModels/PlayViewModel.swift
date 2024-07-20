@@ -62,6 +62,6 @@ import SwiftUI
 
 class MockPlayViewModel: PlayViewModel {
     init() {
-        super.init(selectedRound: Round.fixture())
+        super.init(selectedRound: Round.activeFixture())
     }
 }

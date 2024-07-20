@@ -56,6 +56,6 @@ import Foundation
 
 class MockRoundsListRowViewModel: RoundsListRowViewModel {
     init() {
-        super.init(round: Round.fixture())
+        super.init(round: Round.activeFixture(startsIn: 100))
     }
 }

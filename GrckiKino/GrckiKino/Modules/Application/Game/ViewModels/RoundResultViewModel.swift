@@ -30,6 +30,6 @@ import Foundation
 
 class MockRoundResultViewModel: RoundResultViewModel {
     init() {
-        super.init(result: Round.fixture())
+        super.init(result: Round.activeFixture())
     }
 }

@@ -19,6 +19,6 @@ import Foundation
 
 class MockGameViewModel: GameViewModel {
     init() {
-        super.init(selectedRound: Round.fixture())
+        super.init(selectedRound: Round.activeFixture())
     }
 }
