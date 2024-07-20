@@ -24,8 +24,8 @@ struct RoundsWebRepository: RoundsRepository {
     }
 }
 
-class MockCreateWorkoutRepository: RoundsRepository {
+class MockRoundsRepository: RoundsRepository {
     func getRounds(gameId: Int) async -> Result<[Round], ErrorCases> {
-        return .success(Round.fixtures())
+        return .success(Round.activeFixtures(count: 20))
     }
 }

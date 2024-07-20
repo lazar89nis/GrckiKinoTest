@@ -10,6 +10,8 @@ import Foundation
 @Observable class RoundsViewModel {
         
     var isGameViewPresented = false
+    var selectedRound: Round?
+    
     var rounds: [Round] = []
     private var repository: RoundsRepository
     
@@ -21,7 +23,7 @@ import Foundation
         let res = await repository.getRounds(gameId: Config.gameId)
         switch res {
             case .success(let rounds):
-                print(rounds)
+                //print(rounds)
                 self.rounds = rounds
             case .failure(let failure):
                 print(failure.localizedDescription)
@@ -32,6 +34,6 @@ import Foundation
 
 class MockRoundsViewModel: RoundsViewModel {
     init() {
-        super.init(repository: MockCreateWorkoutRepository())
+        super.init(repository: MockRoundsRepository())
     }
 }
