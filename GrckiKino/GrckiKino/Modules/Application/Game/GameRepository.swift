@@ -1,5 +1,5 @@
 //
-//  RoundsRepository.swift
+//  GameRepository.swift
 //  GrckiKino
 //
 //  Created by Lazar Djordjevic on 19.7.24..
@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol RoundsRepository {
-    func getRounds(gameId: Int) async -> Result<[Round], ErrorCases>
+protocol GameRepository {
+    func getResults(gameId: Int, fromDate: String, toDate: String) async -> Result<[Round], ErrorCases>
 }
 
-struct RoundsWebRepository: RoundsRepository {
-    func getRounds(gameId: Int) async -> Result<[Round], ErrorCases> {
+struct GameWebRepository: GameRepository {
+    func getResults(gameId: Int, fromDate: String, toDate: String) async -> Result<[Round], ErrorCases> {
         let result = await HTTPManager.shared.getRounds(gameId: gameId)
         switch result {
             case .success(let data):
@@ -24,8 +24,8 @@ struct RoundsWebRepository: RoundsRepository {
     }
 }
 
-class MockRoundsRepository: RoundsRepository {
-    func getRounds(gameId: Int) async -> Result<[Round], ErrorCases> {
+class MockGameRepository: GameRepository {
+    func getResults(gameId: Int, fromDate: String, toDate: String) async -> Result<[Round], ErrorCases> {
         return .success(Round.fixtures())
     }
 }

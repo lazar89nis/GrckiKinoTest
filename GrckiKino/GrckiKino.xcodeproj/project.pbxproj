@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7EBE9BFC2C4AD06A00C1989F /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9BFB2C4AD06A00C1989F /* GameRepository.swift */; };
+		7EBE9BFE2C4AD07500C1989F /* GameDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9BFD2C4AD07500C1989F /* GameDependency.swift */; };
+		7EBE9C002C4AD08100C1989F /* GameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9BFF2C4AD08100C1989F /* GameCoordinator.swift */; };
+		7EBE9C022C4AD0AC00C1989F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9C012C4AD0AC00C1989F /* GameView.swift */; };
+		7EBE9C052C4ADEBE00C1989F /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9C042C4ADEBE00C1989F /* GameViewModel.swift */; };
+		7EBE9C082C4AE05E00C1989F /* LiveDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9C072C4AE05E00C1989F /* LiveDrawView.swift */; };
+		7EBE9C0B2C4AE08900C1989F /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9C0A2C4AE08900C1989F /* ResultsView.swift */; };
+		7EBE9C0D2C4AE0A800C1989F /* PlayTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9C0C2C4AE0A800C1989F /* PlayTableView.swift */; };
+		7EBE9C0F2C4AE14800C1989F /* InsettableCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9C0E2C4AE14800C1989F /* InsettableCircle.swift */; };
+		7EBE9C112C4AE18000C1989F /* PlayTableCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9C102C4AE18000C1989F /* PlayTableCircle.swift */; };
+		7EBE9C132C4B0F2A00C1989F /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9C122C4B0F2A00C1989F /* Utility.swift */; };
+		7EBE9C172C4B1B8100C1989F /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 7EBE9C162C4B1B8100C1989F /* AlertToast */; };
+		7EBE9C1A2C4B398300C1989F /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9C192C4B398300C1989F /* PlayView.swift */; };
+		7EBE9C1E2C4B3BF100C1989F /* PlayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9C1D2C4B3BF100C1989F /* PlayViewModel.swift */; };
+		7EBE9C212C4B3EE400C1989F /* Odd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9C202C4B3EE400C1989F /* Odd.swift */; };
+		7EBE9C242C4B3FC000C1989F /* Odd+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9C232C4B3FC000C1989F /* Odd+Fixture.swift */; };
+		7EBE9C272C4B44C400C1989F /* PlayTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9C262C4B44C400C1989F /* PlayTableViewModel.swift */; };
 		7ED047962C4A8026004DB2F9 /* GrckiKinoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED047952C4A8026004DB2F9 /* GrckiKinoApp.swift */; };
 		7ED0479A2C4A8027004DB2F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED047992C4A8027004DB2F9 /* Assets.xcassets */; };
 		7ED0479D2C4A8027004DB2F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED0479C2C4A8027004DB2F9 /* Preview Assets.xcassets */; };
@@ -45,6 +62,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7EBE9BFB2C4AD06A00C1989F /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
+		7EBE9BFD2C4AD07500C1989F /* GameDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDependency.swift; sourceTree = "<group>"; };
+		7EBE9BFF2C4AD08100C1989F /* GameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinator.swift; sourceTree = "<group>"; };
+		7EBE9C012C4AD0AC00C1989F /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		7EBE9C042C4ADEBE00C1989F /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		7EBE9C072C4AE05E00C1989F /* LiveDrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDrawView.swift; sourceTree = "<group>"; };
+		7EBE9C0A2C4AE08900C1989F /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		7EBE9C0C2C4AE0A800C1989F /* PlayTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTableView.swift; sourceTree = "<group>"; };
+		7EBE9C0E2C4AE14800C1989F /* InsettableCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsettableCircle.swift; sourceTree = "<group>"; };
+		7EBE9C102C4AE18000C1989F /* PlayTableCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTableCircle.swift; sourceTree = "<group>"; };
+		7EBE9C122C4B0F2A00C1989F /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		7EBE9C192C4B398300C1989F /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
+		7EBE9C1D2C4B3BF100C1989F /* PlayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewModel.swift; sourceTree = "<group>"; };
+		7EBE9C202C4B3EE400C1989F /* Odd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Odd.swift; sourceTree = "<group>"; };
+		7EBE9C232C4B3FC000C1989F /* Odd+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Odd+Fixture.swift"; sourceTree = "<group>"; };
+		7EBE9C262C4B44C400C1989F /* PlayTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTableViewModel.swift; sourceTree = "<group>"; };
 		7ED047922C4A8026004DB2F9 /* GrckiKino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrckiKino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ED047952C4A8026004DB2F9 /* GrckiKinoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrckiKinoApp.swift; sourceTree = "<group>"; };
 		7ED047992C4A8027004DB2F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +121,7 @@
 				7EE6F4232C4A9F8300A17D77 /* Alamofire in Frameworks */,
 				7EE6F40E2C4A933F00A17D77 /* RswiftLibrary in Frameworks */,
 				7EE6F4292C4A9FDA00A17D77 /* SwiftyJSON in Frameworks */,
+				7EBE9C172C4B1B8100C1989F /* AlertToast in Frameworks */,
 				7EE6F4192C4A965300A17D77 /* rswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +129,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7EBE9BF82C4AD04600C1989F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7EBE9C202C4B3EE400C1989F /* Odd.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7EBE9BF92C4AD04F00C1989F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7EBE9C042C4ADEBE00C1989F /* GameViewModel.swift */,
+				7EBE9C1D2C4B3BF100C1989F /* PlayViewModel.swift */,
+				7EBE9C262C4B44C400C1989F /* PlayTableViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7EBE9BFA2C4AD05600C1989F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7EBE9C012C4AD0AC00C1989F /* GameView.swift */,
+				7EBE9C072C4AE05E00C1989F /* LiveDrawView.swift */,
+				7EBE9C0A2C4AE08900C1989F /* ResultsView.swift */,
+				7EBE9C192C4B398300C1989F /* PlayView.swift */,
+				7EBE9C0C2C4AE0A800C1989F /* PlayTableView.swift */,
+				7EBE9C102C4AE18000C1989F /* PlayTableCircle.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		7ED047892C4A8026004DB2F9 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +225,7 @@
 		7ED047A52C4A83BA004DB2F9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				7EBE9C0E2C4AE14800C1989F /* InsettableCircle.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -168,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				7EE6F4392C4ABB8D00A17D77 /* Round+Fixture.swift */,
+				7EBE9C232C4B3FC000C1989F /* Odd+Fixture.swift */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -216,6 +283,12 @@
 		7ED047AD2C4A87F5004DB2F9 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				7EBE9BFA2C4AD05600C1989F /* Views */,
+				7EBE9BF92C4AD04F00C1989F /* ViewModels */,
+				7EBE9BF82C4AD04600C1989F /* Models */,
+				7EBE9BFB2C4AD06A00C1989F /* GameRepository.swift */,
+				7EBE9BFD2C4AD07500C1989F /* GameDependency.swift */,
+				7EBE9BFF2C4AD08100C1989F /* GameCoordinator.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -269,6 +342,7 @@
 				7ED047C52C4A8960004DB2F9 /* Injectable.swift */,
 				7ED047C72C4A8B01004DB2F9 /* Coordinable.swift */,
 				7EE6F4332C4AA27B00A17D77 /* ErrorCases.swift */,
+				7EBE9C122C4B0F2A00C1989F /* Utility.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -332,6 +406,7 @@
 				7EE6F4182C4A965300A17D77 /* rswift */,
 				7EE6F4222C4A9F8300A17D77 /* Alamofire */,
 				7EE6F4282C4A9FDA00A17D77 /* SwiftyJSON */,
+				7EBE9C162C4B1B8100C1989F /* AlertToast */,
 			);
 			productName = GrckiKino;
 			productReference = 7ED047922C4A8026004DB2F9 /* GrckiKino.app */;
@@ -365,6 +440,7 @@
 				7EE6F40C2C4A933F00A17D77 /* XCRemoteSwiftPackageReference "R" */,
 				7EE6F4212C4A9F8200A17D77 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				7EE6F4272C4A9FDA00A17D77 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				7EBE9C152C4B1B8100C1989F /* XCRemoteSwiftPackageReference "AlertToast" */,
 			);
 			productRefGroup = 7ED047932C4A8026004DB2F9 /* Products */;
 			projectDirPath = "";
@@ -397,28 +473,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EBE9C132C4B0F2A00C1989F /* Utility.swift in Sources */,
 				7ED047B22C4A883E004DB2F9 /* RoundsRepository.swift in Sources */,
 				7ED047962C4A8026004DB2F9 /* GrckiKinoApp.swift in Sources */,
 				7EE6F4132C4A948800A17D77 /* RSwift+Extensions.swift in Sources */,
+				7EBE9C052C4ADEBE00C1989F /* GameViewModel.swift in Sources */,
+				7EBE9C212C4B3EE400C1989F /* Odd.swift in Sources */,
+				7EBE9C002C4AD08100C1989F /* GameCoordinator.swift in Sources */,
+				7EBE9C1A2C4B398300C1989F /* PlayView.swift in Sources */,
 				7ED047BC2C4A88AC004DB2F9 /* SplashCoordinator.swift in Sources */,
 				7ED047C22C4A88DC004DB2F9 /* SplashViewModel.swift in Sources */,
+				7EBE9C0D2C4AE0A800C1989F /* PlayTableView.swift in Sources */,
+				7EBE9C022C4AD0AC00C1989F /* GameView.swift in Sources */,
 				7ED047C62C4A8960004DB2F9 /* Injectable.swift in Sources */,
 				7EE6F43A2C4ABB8D00A17D77 /* Round+Fixture.swift in Sources */,
 				7ED047CA2C4A8C4E004DB2F9 /* RoundsView.swift in Sources */,
+				7EBE9C0B2C4AE08900C1989F /* ResultsView.swift in Sources */,
 				7ED047D22C4A8E96004DB2F9 /* UIWindow+Extensions.swift in Sources */,
 				7ED047C82C4A8B01004DB2F9 /* Coordinable.swift in Sources */,
 				7EE6F43D2C4ABCD900A17D77 /* RoundsListRowViewModel.swift in Sources */,
+				7EBE9C0F2C4AE14800C1989F /* InsettableCircle.swift in Sources */,
+				7EBE9C082C4AE05E00C1989F /* LiveDrawView.swift in Sources */,
 				7ED047C42C4A88E6004DB2F9 /* SplashView.swift in Sources */,
 				7ED047B42C4A884E004DB2F9 /* RoundsDependency.swift in Sources */,
 				7ED047A82C4A842B004DB2F9 /* Config.swift in Sources */,
 				7EE6F4382C4AA3EF00A17D77 /* Parser.swift in Sources */,
+				7EBE9C1E2C4B3BF100C1989F /* PlayViewModel.swift in Sources */,
+				7EBE9C112C4AE18000C1989F /* PlayTableCircle.swift in Sources */,
 				7EE6F4342C4AA27B00A17D77 /* ErrorCases.swift in Sources */,
 				7ED047BE2C4A88B5004DB2F9 /* SplashDependency.swift in Sources */,
 				7ED047B62C4A8860004DB2F9 /* RoundsCoordinator.swift in Sources */,
 				7EE6F4322C4AA17E00A17D77 /* HTTPManager.swift in Sources */,
 				7ED047CC2C4A8C5A004DB2F9 /* RoundsViewModel.swift in Sources */,
 				7EE6F4302C4AA14300A17D77 /* HTTPService.swift in Sources */,
+				7EBE9C242C4B3FC000C1989F /* Odd+Fixture.swift in Sources */,
 				7ED047D02C4A8E6F004DB2F9 /* UIScreen+Extensions.swift in Sources */,
+				7EBE9BFE2C4AD07500C1989F /* GameDependency.swift in Sources */,
+				7EBE9BFC2C4AD06A00C1989F /* GameRepository.swift in Sources */,
+				7EBE9C272C4B44C400C1989F /* PlayTableViewModel.swift in Sources */,
 				7EE6F4362C4AA34700A17D77 /* Round.swift in Sources */,
 				7EE6F41F2C4A9D7600A17D77 /* RoundsListRow.swift in Sources */,
 			);
@@ -651,6 +743,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7EBE9C152C4B1B8100C1989F /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.9;
+			};
+		};
 		7EE6F40C2C4A933F00A17D77 /* XCRemoteSwiftPackageReference "R" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mac-cain13/R.swift";
@@ -678,6 +778,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7EBE9C162C4B1B8100C1989F /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EBE9C152C4B1B8100C1989F /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
 		7EE6F40D2C4A933F00A17D77 /* RswiftLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7EE6F40C2C4A933F00A17D77 /* XCRemoteSwiftPackageReference "R" */;

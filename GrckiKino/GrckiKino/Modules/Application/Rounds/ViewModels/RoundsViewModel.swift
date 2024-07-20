@@ -10,6 +10,8 @@ import Foundation
 @Observable class RoundsViewModel {
         
     var isGameViewPresented = false
+    var selectedRound: Round?
+    
     var rounds: [Round] = []
     private var repository: RoundsRepository
     
@@ -32,6 +34,6 @@ import Foundation
 
 class MockRoundsViewModel: RoundsViewModel {
     init() {
-        super.init(repository: MockCreateWorkoutRepository())
+        super.init(repository: MockRoundsRepository())
     }
 }

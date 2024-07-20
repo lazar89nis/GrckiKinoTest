@@ -1,28 +1,34 @@
 //
-//  RoundsListRowViewModel.swift
+//  PlayViewModel.swift
 //  GrckiKino
 //
-//  Created by Lazar Djordjevic on 19.7.24..
+//  Created by Lazar Djordjevic on 20.7.24..
 //
 
 import Foundation
 
-@Observable class RoundsListRowViewModel {
+@Observable class PlayViewModel {
     
-    private var round: Round
     private var timer: Timer?
     private let dateFormatter = DateFormatter()
-
-    var startsAt: String
-    var timeLeft: String
-    var finished: Bool
     
-    init(round: Round) {
-        self.round = round
-        dateFormatter.dateFormat = "HH:mm"
-        startsAt = dateFormatter.string(from: round.drawTimeDate)
+    var selectedRound: Round
+    
+    var drawTime: String
+    var roundId: String
+    
+    var timeLeft: String
+    
+    var odds: [Odd] = Odd.fixtures()
+    
+    init(selectedRound: Round) {
+        self.selectedRound = selectedRound
+        
+        dateFormatter.dateFormat = "MM-dd HH:mm"
+        drawTime = dateFormatter.string(from: selectedRound.drawTimeDate)
         timeLeft = ""
-        finished = false
+        
+        roundId = String(selectedRound.drawId)
         
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
             self?.timeLeft = self?.calculateTimeLeft() ?? ""
@@ -38,20 +44,13 @@ import Foundation
     func calculateTimeLeft() -> String {
         let currentDate = Date()
         
-        let difference = round.drawTimeDate.timeIntervalSince(currentDate)
+        let difference = selectedRound.drawTimeDate.timeIntervalSince(currentDate)
         
-        finished = difference <= 0
         
         if difference < 0 {
             return "00:00:00"
         }
         
         return Utility.formatTimeInterval(difference)
-    }
-}
-
-class MockRoundsListRowViewModel: RoundsListRowViewModel {
-    init() {
-        super.init(round: Round.fixture())
     }
 }

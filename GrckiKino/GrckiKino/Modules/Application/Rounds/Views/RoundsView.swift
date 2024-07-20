@@ -11,8 +11,11 @@ struct RoundsView: View {
     
     @State var viewModel: RoundsViewModel
     
+    let coordinator: RoundsCoordinable
+    @State private var navigationPath = NavigationPath()
+    
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $navigationPath) {
             VStack(spacing: 0) {
                 titleView
                 listView
@@ -43,7 +46,9 @@ struct RoundsView: View {
             RoundsListRow(viewModel: rowViewModel)
                 .onTapGesture {
                     if(!rowViewModel.finished) {
-                        viewModel.isGameViewPresented = true
+                        //viewModel.selectedRound = round
+                        //viewModel.isGameViewPresented = true
+                        navigationPath.append(round)
                     }
                 }
                 .listRowBackground(Color.clear)
@@ -56,12 +61,16 @@ struct RoundsView: View {
     
     @ViewBuilder var navigationLinks: some View {
         Spacer().frame(width: 0, height: 0)
-            .navigationDestination(isPresented: $viewModel.isGameViewPresented) {
-                Text("Game view")
+            /*.navigationDestination(isPresented: $viewModel.isGameViewPresented) {
+                self.coordinator.openGameView(round: viewModel.selectedRound!)
+            }*/
+            .navigationDestination(for: Round.self) { round in
+                self.coordinator.openGameView(round: round)
             }
     }
 }
 
 #Preview {
-    RoundsView(viewModel: MockRoundsViewModel())
+    RoundsView(viewModel: MockRoundsViewModel(), 
+               coordinator: RoundsCoordinator(dependency: RoundsDependency()))
 }

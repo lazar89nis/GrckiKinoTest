@@ -9,6 +9,7 @@ import SwiftUI
 
 protocol RoundsCoordinable: Coordinable {
     var view: AnyView { get }
+    func openGameView(round: Round) -> AnyView
 }
 
 final class RoundsCoordinator<Dependency>: RoundsCoordinable where Dependency: RoundsInjectable {
@@ -17,11 +18,15 @@ final class RoundsCoordinator<Dependency>: RoundsCoordinable where Dependency: R
     
     lazy var view: AnyView = {
         AnyView(
-            RoundsView(
-                viewModel: dependency.viewModel
-            )
-        )
+            RoundsView(viewModel: dependency.viewModel,
+                       coordinator: self))
     }()
+    
+    func openGameView(round: Round) -> AnyView {
+        let gameDependency = GameDependency()
+        let gameCoordinator =  GameCoordinator(dependency: gameDependency, round: round)
+        return gameCoordinator.view
+    }
     
     init(dependency: Dependency) {
         self.dependency = dependency
