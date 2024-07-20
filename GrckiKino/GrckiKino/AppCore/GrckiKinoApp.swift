@@ -14,10 +14,14 @@ struct GrckiKinoApp: App {
     
     init() {
         let appearance = UISegmentedControl.appearance()
-        appearance.selectedSegmentTintColor = UIColor(red: 254/255, green: 192/255, blue: 26/255, alpha: 1)
-        appearance.backgroundColor = UIColor(red: 24/255, green: 27/255, blue: 58/255, alpha: 1)
-        appearance.setTitleTextAttributes([.foregroundColor: UIColor(red: 37/255, green: 37/255, blue: 37/255, alpha: 1), .font: UIFont(name: "NeuePlak-Bold", size: 16)!], for: .selected)
-        appearance.setTitleTextAttributes([.foregroundColor: UIColor(red: 207/255, green: 207/255, blue: 207/255, alpha: 1), .font: UIFont(name: "NeuePlak-Regular", size: 16)!], for: .normal)
+        appearance.selectedSegmentTintColor = UIColor(named: R.color.segmentedYellow.name)!
+        appearance.backgroundColor = UIColor(named: R.color.rowBackground.name)!
+        appearance.setTitleTextAttributes([.foregroundColor: UIColor(named: R.color.textDark.name)!,
+            .font: R.font.neuePlakBold.callAsFunction(size: 15)!], for: .selected)
+        appearance.setTitleTextAttributes([.foregroundColor: UIColor(named: R.color.textGrey.name)!,
+            .font: R.font.neuePlakRegular.callAsFunction(size: 15)!], for: .normal)
+
+        UIRefreshControl.appearance().tintColor = UIColor(named: R.color.textWhite.name)
     }
     
     var body: some Scene {

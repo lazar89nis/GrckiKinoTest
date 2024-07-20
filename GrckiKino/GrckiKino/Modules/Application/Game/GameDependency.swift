@@ -11,6 +11,7 @@ protocol GameInjectable: Injectable {
     func gameViewModel(round: Round) -> GameViewModel
     func playViewModel(round: Round) -> PlayViewModel
     func playTableViewModel() -> PlayTableViewModel
+    func resultsViewModel() -> ResultsViewModel
 }
 
 final class GameDependency: GameInjectable {
@@ -31,6 +32,10 @@ final class GameDependency: GameInjectable {
     
     func playTableViewModel() -> PlayTableViewModel {
         PlayTableViewModel()
+    }
+    
+    func resultsViewModel() -> ResultsViewModel {
+        ResultsViewModel(repository: gameRepository)
     }
     
     

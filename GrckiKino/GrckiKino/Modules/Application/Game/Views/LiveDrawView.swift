@@ -20,6 +20,7 @@ struct WebView: UIViewRepresentable {
     
     init() {
         webView = WKWebView(frame: .zero)
+        webView.backgroundColor = UIColor(named: R.color.background.name)!
     }
     
     func makeUIView(context: Context) -> WKWebView {

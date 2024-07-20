@@ -29,7 +29,7 @@ struct GameView: View {
     }
     
     var bgView: some View {
-        R.color.background.color//.edgesIgnoringSafeArea(.all)
+        R.color.background.color.edgesIgnoringSafeArea(.all)
     }
     
     var pickerView: some View {
@@ -43,21 +43,23 @@ struct GameView: View {
     }
     
     var mainContentView: some View {
-        TabView(selection: $viewModel.selectedSegment) {
-            PlayView(viewModel: dependency.playViewModel(round: viewModel.selectedRound),
-                     playTableViewModel: dependency.playTableViewModel())
+        ZStack {
+            TabView(selection: $viewModel.selectedSegment) {
+                PlayView(viewModel: dependency.playViewModel(round: viewModel.selectedRound),
+                         playTableViewModel: dependency.playTableViewModel())
                 .tag(0)
                 .padding(.top)
-            LiveDrawView()
-                .tag(1)
-                .padding(.top)
-                .edgesIgnoringSafeArea(.all)
-            ResultsView()
-                .tag(2)
+                LiveDrawView()
+                    .tag(1)
+                    .padding(.top)
+                    .edgesIgnoringSafeArea(.all)
+                ResultsView(viewModel: dependency.resultsViewModel())
+                    .tag(2)
+            }
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            .animation(.easeInOut, value: viewModel.selectedSegment)
+            .edgesIgnoringSafeArea(.all)
         }
-        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-        .animation(.easeInOut, value: viewModel.selectedSegment)
-        .edgesIgnoringSafeArea(.all)
     }
 }
 

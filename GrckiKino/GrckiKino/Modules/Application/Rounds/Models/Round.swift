@@ -13,11 +13,14 @@ class Round: Hashable, CustomStringConvertible {
     var drawTime: Int
     var drawTimeDate: Date
     
-    init(gameId: Int, drawId: Int, drawTime: Int) {
+    let winningNumbers: [Int]
+    
+    init(gameId: Int, drawId: Int, drawTime: Int, winningNumbers: [Int] = []) {
         self.gameId = gameId
         self.drawId = drawId
         self.drawTime = drawTime
         self.drawTimeDate =  Date(timeIntervalSince1970: TimeInterval(drawTime/1000))
+        self.winningNumbers = winningNumbers
     }
     
     static func == (lhs: Round, rhs: Round) -> Bool {
@@ -31,6 +34,6 @@ class Round: Hashable, CustomStringConvertible {
     }
     
     var description: String {
-        return "Round --> gameId:\(gameId), drawId:\(drawId), drawTime:\(drawTime), drawTimeDate:\(drawTimeDate)"
+        return "Round --> gameId:\(gameId), drawId:\(drawId), drawTime:\(drawTime), drawTimeDate:\(drawTimeDate), winningNumbers:\(winningNumbers)"
     }
 }

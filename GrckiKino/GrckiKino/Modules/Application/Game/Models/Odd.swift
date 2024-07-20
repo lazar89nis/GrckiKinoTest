@@ -8,24 +8,24 @@
 import Foundation
 
 class Odd: Hashable, CustomStringConvertible {
-    var value: Int
-    var round: Int
+    var value: Double
+    var ball: Int
     
-    init(value: Int, round: Int) {
+    init(value: Double, ball: Int) {
         self.value = value
-        self.round = round
+        self.ball = ball
     }
     
     static func == (lhs: Odd, rhs: Odd) -> Bool {
-        lhs.value == rhs.value && lhs.round == rhs.round
+        lhs.value == rhs.value && lhs.ball == rhs.ball
     }
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(value)
-        hasher.combine(round)
+        hasher.combine(ball)
     }
         
     var description: String {
-        return "Odd --> value:\(value), round:\(round)"
+        return "Odd --> value:\(value), ball:\(ball)"
     }
 }

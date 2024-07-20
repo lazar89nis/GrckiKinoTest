@@ -19,6 +19,8 @@ import Foundation
     
     var timeLeft: String
     
+    var timeLeftProgress = 0.0
+    
     var odds: [Odd] = Odd.fixtures()
     
     init(selectedRound: Round) {
@@ -46,6 +48,7 @@ import Foundation
         
         let difference = selectedRound.drawTimeDate.timeIntervalSince(currentDate)
         
+        timeLeftProgress = max(0,difference/300.0)
         
         if difference < 0 {
             return "00:00:00"

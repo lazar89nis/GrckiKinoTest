@@ -8,11 +8,30 @@
 import SwiftUI
 
 struct ResultsView: View {
+    
+    @State var viewModel: ResultsViewModel
+    
     var body: some View {
-        Text("ResultsView")
+        List(viewModel.results, id: \.self) { result in
+            RoundResultView(viewModel: RoundResultViewModel(result: result))
+                .listRowBackground(Color.clear)
+                .listRowInsets(EdgeInsets(top: 16, leading: 16, bottom: 0, trailing: 16))
+                .listRowSeparator(.hidden)
+        }
+        .listStyle(PlainListStyle())
+        .refreshable {
+            Task {
+                await viewModel.loadResults()
+            }
+        }
+        .onAppear() {
+            Task {
+                await viewModel.loadResults()
+            }
+        }
     }
 }
 
 #Preview {
-    ResultsView()
+    ResultsView(viewModel: ResultsViewModel(repository: GameWebRepository()))
 }

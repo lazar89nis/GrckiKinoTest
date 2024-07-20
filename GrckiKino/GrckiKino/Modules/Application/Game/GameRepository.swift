@@ -13,10 +13,10 @@ protocol GameRepository {
 
 struct GameWebRepository: GameRepository {
     func getResults(gameId: Int, fromDate: String, toDate: String) async -> Result<[Round], ErrorCases> {
-        let result = await HTTPManager.shared.getRounds(gameId: gameId)
+        let result = await HTTPManager.shared.getResults(gameId: gameId, fromDate: fromDate, toDate: toDate)
         switch result {
             case .success(let data):
-                let rounds = Parser.parseGetRounds(JSONData: data)
+                let rounds = Parser.parseGetResults(JSONData: data)
                 return .success(rounds)
             case .failure(let error):
                 return .failure(error)

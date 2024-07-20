@@ -32,4 +32,19 @@ class HTTPManager {
             return .failure(.generalError)
         }
     }
+    
+    func getResults(gameId: Int, fromDate: String, toDate: String) async -> Result<Data, ErrorCases> {
+        do {
+            let data = try await self.service.requestWithURL(
+                Config.baseUrl,
+                path: "/\(gameId)/draw-date/\(fromDate)/\(toDate)",
+                methodType: .get)
+            return .success(data)
+        } catch {
+            if let er = error as? ErrorCases {
+                return .failure(er)
+            }
+            return .failure(.generalError)
+        }
+    }
 }

@@ -23,7 +23,7 @@ import Foundation
         let res = await repository.getRounds(gameId: Config.gameId)
         switch res {
             case .success(let rounds):
-                print(rounds)
+                //print(rounds)
                 self.rounds = rounds
             case .failure(let failure):
                 print(failure.localizedDescription)

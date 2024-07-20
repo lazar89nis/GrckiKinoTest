@@ -46,4 +46,21 @@ class Parser {
         
         return rounds
     }
+    
+    static func parseGetResults(JSONData: Data?) -> [Round] {
+        var rounds: [Round] = []
+        
+        let json:JSON = getJSONFromData(JSONData)
+        
+        for (_,subJson):(String, JSON) in json["content"] {
+            let gameId = subJson["gameId"].intValue
+            let drawId = subJson["drawId"].intValue
+            let drawTime = subJson["drawTime"].intValue
+            
+            let winningNumbers = subJson["winningNumbers"]["list"].arrayValue.map({$0.intValue})
+            rounds.append(Round(gameId: gameId, drawId: drawId, drawTime: drawTime, winningNumbers: winningNumbers))
+        }
+        
+        return rounds
+    }
 }

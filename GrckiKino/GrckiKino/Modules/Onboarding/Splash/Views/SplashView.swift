@@ -10,6 +10,7 @@ import SwiftUI
 struct SplashView: View {
     
     @State var viewModel: SplashViewModel
+    @State private var offset: CGFloat = UIScreen.main.bounds.size.height/2
     
     let roundsCoordinator: RoundsCoordinable
     
@@ -17,19 +18,22 @@ struct SplashView: View {
         rootView
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                    withAnimation {
-                        viewModel.splashFinished()
-                    }
+                    viewModel.splashFinished()
                 }
             }
     }
     
     var launchView: some View {
-        ZStack {
-            backgroundView
+        ZStack(alignment: .top) {
+            backgroundView.edgesIgnoringSafeArea(.all)
             logoView
+                .offset(CGSize(width: 0.0, height: offset))
+                .onAppear {
+                    withAnimation(.easeInOut(duration: 1.3)) {
+                        offset = 0
+                    }
+                }
         }
-        .edgesIgnoringSafeArea(.all)
     }
     
     var backgroundView: some View {
@@ -37,9 +41,10 @@ struct SplashView: View {
     }
     
     var logoView: some View {
-        Text("GRCKI KINO")
+        Text("Grcki kino".uppercased())
             .foregroundColor(R.color.textWhite.color)
-            .font(R.font.neuePlakBold.font(size: 30))
+            .font(R.font.neuePlakBold.font(size: 36))
+            .padding(.top, 6)
     }
     
     var rootView: some View {

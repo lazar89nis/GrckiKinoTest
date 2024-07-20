@@ -21,3 +21,19 @@ struct InsettableCircle: InsettableShape {
         return circle
     }
 }
+
+struct InsettableRect: InsettableShape {
+    var cornerRadius: CGFloat
+    var insetAmount: CGFloat = 0
+    
+    func path(in rect: CGRect) -> Path {
+        let insetRect = rect.insetBy(dx: insetAmount, dy: insetAmount)
+        return RoundedRectangle(cornerRadius: cornerRadius).path(in: insetRect)
+    }
+    
+    func inset(by amount: CGFloat) -> some InsettableShape {
+        var rect = self
+        rect.insetAmount += amount
+        return rect
+    }
+}

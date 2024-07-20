@@ -13,14 +13,14 @@ struct RoundsListRow: View {
         
     var body: some View {
         HStack(spacing: 0) {
-            Text("Starts at: \(viewModel.startsAt)")
+            Text("\(viewModel.startsAt)")
                 .font(R.font.neuePlakBold.font(size: 16))
                 .foregroundColor(R.color.textWhite.color)
                 .padding(EdgeInsets(top: 18, leading: 16, bottom: 16, trailing: 8))
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            Text(viewModel.finished ? "Finished" : "Time left: \(viewModel.timeLeft)")
-                .font(R.font.neuePlakRegular.font(size: 16))
+            Text(viewModel.finished ? "Finished" : "\(viewModel.timeLeft)")
+                .font(R.font.neuePlakBold.font(size: 16))
                 .foregroundColor(R.color.textWhite.color)
                 .padding(EdgeInsets(top: 18, leading: 0, bottom: 16, trailing: 16))
                 .frame(maxWidth: .infinity, alignment: .trailing)
