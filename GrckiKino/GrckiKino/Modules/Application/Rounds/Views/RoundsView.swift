@@ -18,12 +18,13 @@ struct RoundsView: View {
                     .padding(.top, 6)
                 infoTextView
                     .padding(.vertical, 10)
-                listView
-                    .refreshable {
-                        Task {
-                            await viewModel.loadRounds()
-                        }
+                Group {
+                    if viewModel.rounds.isEmpty {
+                        loader
+                    } else {
+                        listView
                     }
+                }
             }
             .background(Color.appBackground)
             .navigationTitle("Rounds")
@@ -74,6 +75,19 @@ struct RoundsView: View {
             .listStyle(.plain)
             .background(Color.clear)
         }
+        .refreshable {
+            Task {
+                await viewModel.loadRounds()
+            }
+        }
+    }
+    
+    var loader: some View {
+        ProgressView()
+            .progressViewStyle(CircularProgressViewStyle())
+            .tint(.appTextWhite)
+            .scaleEffect(2.5)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
     
     var listHeader: some View {
