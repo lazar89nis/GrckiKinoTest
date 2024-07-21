@@ -21,8 +21,11 @@ struct RoundsView: View {
                     if viewModel.rounds.isEmpty && viewModel.dataLoading {
                         loader
                     } else {
-                        infoTextView
-                            .padding(.vertical, 10)
+                        if(!viewModel.rounds.isEmpty) {
+                            infoTextView
+                                .padding(.vertical, 10)
+                            
+                        }
                         listView
                     }
                 }
@@ -81,7 +84,9 @@ struct RoundsView: View {
     
     var listView: some View {
         VStack(spacing: 0) {
-            listHeader
+            if(!viewModel.rounds.isEmpty) {
+                listHeader
+            }
             List(viewModel.rounds, id: \.self.drawId) { round in
                 let rowViewModel = RoundsListRowViewModel(round: round)
                 RoundsListRow(viewModel: rowViewModel)
