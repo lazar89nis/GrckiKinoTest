@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import AlertToast
 
 struct GameView: View {
+    @Environment(RoundsViewModel.self) var roundsViewModel
+
     @State var viewModel: GameViewModel
     let dependency: GameInjectable
-    
+
     var body: some View {
         ZStack {
             bgView
@@ -19,6 +22,20 @@ struct GameView: View {
                 mainContentView
             }
             .padding(.top)
+        }
+        .onChange(of: roundsViewModel.activeRound, { oldValue, newValue in
+            viewModel.activeRoundChanged(newRound: newValue)
+        })
+        .toast(isPresenting: $viewModel.newRoundStartedToast, duration: 3, tapToDismiss: true){
+            AlertToast(displayMode: .alert,
+                       type: .complete(.appTextWhite),
+                       title: String.localized(key: "Round finished"),
+                       subTitle: String.localized(key: "New round starting"),
+                       style: AlertToast.AlertStyle.style(backgroundColor:.appRoundDoneBackground,
+                                                          titleColor: .appTextWhite,
+                                                          subTitleColor: .appTextWhite,
+                                                          titleFont: .bodyLargeBold,
+                                                          subTitleFont: .bodyLarge))
         }
         .navigationTitle("Round \(String(viewModel.selectedRound.drawId))")
         .navigationBarTitleDisplayMode(.inline)
@@ -64,8 +81,15 @@ struct GameView: View {
 }
 
 #Preview {
-    NavigationStack {
+    let roundsViewModel = MockRoundsViewModel()
+    Task {
+        do {
+            await roundsViewModel.loadRounds()
+        }
+    }
+    return NavigationStack {
         GameView(viewModel: MockGameViewModel(),
                  dependency: GameDependency())
+        .environment(roundsViewModel as RoundsViewModel)
     }
 }

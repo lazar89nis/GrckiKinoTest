@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PlayView: View {
-    @State var viewModel: PlayViewModel
+    var viewModel: PlayViewModel
     @State var playTableViewModel: PlayTableViewModel
     
     var body: some View {

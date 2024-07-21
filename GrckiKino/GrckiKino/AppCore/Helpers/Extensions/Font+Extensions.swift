@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension Font {
-    static var caption: Font {
+    static var appCaption: Font {
         R.font.neuePlakSemiBold.font(size: 12)
     }
     

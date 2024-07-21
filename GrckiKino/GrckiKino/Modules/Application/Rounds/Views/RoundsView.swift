@@ -11,7 +11,6 @@ struct RoundsView: View {
     @State var viewModel: RoundsViewModel
     let coordinator: RoundsCoordinable
     
-    
     var body: some View {
         NavigationStack(path: $viewModel.navigationPath) {
             VStack(spacing: 0) {
@@ -30,6 +29,7 @@ struct RoundsView: View {
             .navigationTitle("Rounds")
             .toolbar(.hidden, for: .navigationBar)
             navigationLinks
+                
         }
         .onAppear {
             Task {
@@ -81,7 +81,7 @@ struct RoundsView: View {
             Text("Starts at")
                 .font(.bodyLarge)
                 .foregroundColor(.appTextWhite)
-                .multilineTextAlignment(.center)            
+                .multilineTextAlignment(.center)
             Spacer()
             Text("Time left")
                 .font(.bodyLarge)
@@ -95,11 +95,13 @@ struct RoundsView: View {
         Spacer().frame(width: 0, height: 0)
             .navigationDestination(for: Round.self) { round in
                 self.coordinator.openGameView(round: round)
+                    .environment(viewModel)
             }
     }
 }
 
 #Preview {
-    RoundsView(viewModel: MockRoundsViewModel(),
-               coordinator: RoundsCoordinator(dependency: RoundsDependency()))
+    let viewModel = MockRoundsViewModel()
+    return RoundsView(viewModel: viewModel,
+                      coordinator: RoundsCoordinator(dependency: RoundsDependency()))
 }

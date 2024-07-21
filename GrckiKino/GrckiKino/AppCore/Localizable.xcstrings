@@ -116,6 +116,23 @@
         }
       }
     },
+    "New round starting" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New round starting"
+          }
+        },
+        "sr-Latn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nova runda pocinje"
+          }
+        }
+      }
+    },
     "Play" : {
       "localizations" : {
         "en" : {
@@ -160,6 +177,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kolo %@"
+          }
+        }
+      }
+    },
+    "Round finished" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Round finished"
+          }
+        },
+        "sr-Latn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Runda je zavrsena"
           }
         }
       }

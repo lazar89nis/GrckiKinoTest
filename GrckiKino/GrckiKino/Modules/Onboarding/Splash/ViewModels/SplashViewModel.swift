@@ -28,4 +28,10 @@ class MockSplashViewModel: SplashViewModel {
         super.init()
         self.state = state
     }
+    
+    override func splashFinished() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            super.splashFinished()
+        }
+    }
 }

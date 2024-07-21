@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E876E922C4BDA7300784B9D /* OddsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E876E912C4BDA7300784B9D /* OddsView.swift */; };
+		7EB469522C4D8AF200241341 /* OddsBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB469512C4D8AF200241341 /* OddsBubbleView.swift */; };
 		7EBE9BFC2C4AD06A00C1989F /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9BFB2C4AD06A00C1989F /* GameRepository.swift */; };
 		7EBE9BFE2C4AD07500C1989F /* GameDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9BFD2C4AD07500C1989F /* GameDependency.swift */; };
 		7EBE9C002C4AD08100C1989F /* GameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9BFF2C4AD08100C1989F /* GameCoordinator.swift */; };
@@ -73,6 +74,7 @@
 
 /* Begin PBXFileReference section */
 		7E876E912C4BDA7300784B9D /* OddsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsView.swift; sourceTree = "<group>"; };
+		7EB469512C4D8AF200241341 /* OddsBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsBubbleView.swift; sourceTree = "<group>"; };
 		7EBE9BFB2C4AD06A00C1989F /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
 		7EBE9BFD2C4AD07500C1989F /* GameDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDependency.swift; sourceTree = "<group>"; };
 		7EBE9BFF2C4AD08100C1989F /* GameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinator.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				7EBE9C292C4B4C6800C1989F /* RoundResultView.swift */,
 				7EBE9C192C4B398300C1989F /* PlayView.swift */,
 				7E876E912C4BDA7300784B9D /* OddsView.swift */,
+				7EB469512C4D8AF200241341 /* OddsBubbleView.swift */,
 				7EBE9C0C2C4AE0A800C1989F /* PlayTableView.swift */,
 				7EBE9C102C4AE18000C1989F /* PlayTableCircle.swift */,
 			);
@@ -511,6 +514,7 @@
 				7ED047962C4A8026004DB2F9 /* GrckiKinoApp.swift in Sources */,
 				7EF34E572C4C7162001EFFB9 /* Color+Extensions.swift in Sources */,
 				7EE6F4132C4A948800A17D77 /* RSwift+Extensions.swift in Sources */,
+				7EB469522C4D8AF200241341 /* OddsBubbleView.swift in Sources */,
 				7EBE9C052C4ADEBE00C1989F /* GameViewModel.swift in Sources */,
 				7EBE9C302C4B536F00C1989F /* ResultsViewModel.swift in Sources */,
 				7EBE9C212C4B3EE400C1989F /* Odd.swift in Sources */,

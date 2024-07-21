@@ -10,9 +10,19 @@ import SwiftUI
 @Observable class GameViewModel {
     var selectedRound: Round
     var selectedSegment = 0
+    var newRoundStartedToast = false
     
     init(selectedRound: Round) {
         self.selectedRound = selectedRound
+    }
+    
+    func activeRoundChanged(newRound: Round?) {
+        guard let newRound = newRound else { return }
+        if selectedRound.drawId != newRound.drawId && selectedRound.drawId < newRound.drawId {
+            selectedRound = newRound
+            newRoundStartedToast = true
+        }
+        
     }
 }
 

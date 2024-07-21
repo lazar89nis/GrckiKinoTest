@@ -23,7 +23,7 @@ extension DateFormatter {
             switch self {
                 case .jsonSimplified: return "yyyy-MM-dd"
                 case .hourMinute: return "HH:mm"
-                case .monthDayHourMinute: return "MM-dd HH:mm"
+                case .monthDayHourMinute: return "dd-MM HH:mm"
             }
         }
     }

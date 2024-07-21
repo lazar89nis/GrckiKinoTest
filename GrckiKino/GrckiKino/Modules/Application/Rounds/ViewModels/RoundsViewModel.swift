@@ -6,29 +6,45 @@
 //
 
 import SwiftUI
+import Combine
 
 @Observable class RoundsViewModel {
     var isGameViewPresented = false
     var rounds: [Round] = []
     var navigationPath = NavigationPath()
-
+    
     private let repository: RoundsRepository
     private var dataLoading = false
-    private var timer: Timer?
-
+    private var timer: AnyCancellable?
+    
+    var activeRound: Round?
+    
     init(repository: RoundsRepository) {
         self.repository = repository
         
-        timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { [weak self] _ in
-            withAnimation {
-                self?.rounds.removeAll(where: {Date().distance(to: $0.drawTimeDate) < -10 })
+        timer = Timer.publish(every: 1, on: .main, in: .common)
+            .autoconnect()
+            .sink { [weak self] _ in
+                guard let self = self else { return }
+                if(rounds.isEmpty) { return }
+                
+                let currentRounds = rounds
+                let updatedRounds = rounds.filter { Date().distance(to: $0.drawTimeDate) >= 0 }
+
+                if currentRounds.count != updatedRounds.count {
+                    withAnimation {
+                        self.rounds = updatedRounds
+                    }
+                    self.activeRound = self.rounds.first
+                    self.checkDataReload()
+                }
+                //self.activeRound = self.rounds.randomElement()
             }
-            self?.checkDataReload()
-        }
     }
     
     deinit {
-        timer?.invalidate()
+        timer?.cancel()
+        timer = nil
     }
     
     func checkDataReload() {

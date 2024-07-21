@@ -63,4 +63,9 @@ extension Color {
     static var appToolbarBackground: Color {
         R.color.toolbarBackground.color
     }
+    
+    static var appRoundDoneBackground: Color {
+        R.color.roundDoneBackground.color
+    }
+    
 }
