@@ -11,10 +11,9 @@ struct RoundsView: View {
     @State var viewModel: RoundsViewModel
     let coordinator: RoundsCoordinable
     
-    @State private var navigationPath = NavigationPath()
     
     var body: some View {
-        NavigationStack(path: $navigationPath) {
+        NavigationStack(path: $viewModel.navigationPath) {
             VStack(spacing: 0) {
                 titleView
                     .padding(.top, 6)
@@ -42,7 +41,7 @@ struct RoundsView: View {
     var titleView: some View {
         Text("Grcki kino")
             .textCase(.uppercase)
-            .font(.title)
+            .font(.appTitle)
             .foregroundColor(.appTextWhite)
             .multilineTextAlignment(.center)
             .padding(.horizontal, 16)
@@ -65,7 +64,7 @@ struct RoundsView: View {
                 RoundsListRow(viewModel: rowViewModel)
                     .onTapGesture {
                         if(!rowViewModel.isFinished) {
-                            navigationPath.append(round)
+                            viewModel.navigationPath.append(round)
                         }
                     }
                     .listRowBackground(Color.clear)

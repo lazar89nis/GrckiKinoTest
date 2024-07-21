@@ -5,7 +5,7 @@
 //  Created by Lazar Djordjevic on 19.7.24..
 //
 
-import Foundation
+import SwiftUI
 
 @Observable class GameViewModel {
     var selectedRound: Round

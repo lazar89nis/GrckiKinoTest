@@ -51,7 +51,7 @@ struct SplashView: View {
         Text("Grcki kino")
             .textCase(.uppercase)
             .foregroundColor(.appTextWhite)
-            .font(.title)
+            .font(.appTitle)
             .padding(.top, 6)
     }
     

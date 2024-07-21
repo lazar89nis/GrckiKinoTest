@@ -40,7 +40,7 @@ extension Font {
         R.font.neuePlakBold.font(size: 16)
     }
     
-    static var title: Font {
+    static var appTitle: Font {
         R.font.neuePlakBold.font(size: 36)
     }
 }
