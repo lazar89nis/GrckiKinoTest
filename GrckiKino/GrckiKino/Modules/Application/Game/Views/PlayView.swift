@@ -29,6 +29,7 @@ struct PlayView: View {
             ProgressView(value: 1-viewModel.timeLeftProgress)
                 .progressViewStyle(LinearProgressViewStyle())
                 .tint(viewModel.timeLeftProgress < 0.2 ? .appLightRed : .appLightBlueStroke)
+                .padding(.bottom, 4)
             
             HStack(spacing:0)  {
                 timeLeftView
@@ -36,7 +37,7 @@ struct PlayView: View {
                 selectedNumbersView
             }
             .padding(.horizontal, 16)
-            .padding(.vertical, 8)
+            .padding(.bottom, 8)
         }
         .background(Color.appFooterBackground)
     }

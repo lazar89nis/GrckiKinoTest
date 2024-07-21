@@ -12,7 +12,7 @@ struct RoundInfoView: View {
     var roundId:String
     
     var body: some View {
-        HStack(spacing: 16) {
+        HStack(spacing: 12) {
             makeBubbleView(infoText: String.localized(key:"Draw time: "), valueText: drawTime, hasInfinityWidth: true)
             makeBubbleView(infoText: String.localized(key:"Round: "), valueText: roundId)
         }
@@ -32,7 +32,8 @@ struct RoundInfoView: View {
             
         }
         .frame(maxWidth: hasInfinityWidth ? .infinity : nil)
-        .padding(12)
+        .padding(.vertical, 12)
+        .padding(.horizontal, 8)
         .background(Color.appToolbarBackground)
         .cornerRadius(10)
         .overlay(

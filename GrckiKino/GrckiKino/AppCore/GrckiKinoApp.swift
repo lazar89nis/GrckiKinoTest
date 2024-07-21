@@ -16,9 +16,9 @@ struct GrckiKinoApp: App {
         appearance.selectedSegmentTintColor = UIColor(named: R.color.segmentedYellow.name)!
         appearance.backgroundColor = UIColor(named: R.color.rowBackground.name)!
         appearance.setTitleTextAttributes([.foregroundColor: UIColor(named: R.color.textDark.name)!,
-            .font: R.font.neuePlakBold.callAsFunction(size: 15)!], for: .selected)
+            .font: R.font.neuePlakBold.callAsFunction(size: 14)!], for: .selected)
         appearance.setTitleTextAttributes([.foregroundColor: UIColor(named: R.color.textGrey.name)!,
-            .font: R.font.neuePlakRegular.callAsFunction(size: 15)!], for: .normal)
+            .font: R.font.neuePlakRegular.callAsFunction(size: 14)!], for: .normal)
 
         UIRefreshControl.appearance().tintColor = UIColor(named: R.color.textWhite.name)
     }
