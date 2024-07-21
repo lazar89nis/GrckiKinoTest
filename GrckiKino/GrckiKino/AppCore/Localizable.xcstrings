@@ -149,6 +149,23 @@
         }
       }
     },
+    "Please try again" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please try again"
+          }
+        },
+        "sr-Latn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pokusajte ponovo"
+          }
+        }
+      }
+    },
     "Results" : {
       "localizations" : {
         "en" : {
@@ -295,6 +312,23 @@
         }
       }
     },
+    "There was an error getting data" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There was an error getting data"
+          }
+        },
+        "sr-Latn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Doslo je do greske prilikom povlacenja podataka"
+          }
+        }
+      }
+    },
     "Time left" : {
       "localizations" : {
         "en" : {
@@ -323,6 +357,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Preostalo vreme: "
+          }
+        }
+      }
+    },
+    "Try again" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try again"
+          }
+        },
+        "sr-Latn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pokusaj ponovo"
           }
         }
       }

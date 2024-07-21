@@ -12,9 +12,11 @@ import Combine
     var isGameViewPresented = false
     var rounds: [Round] = []
     var navigationPath = NavigationPath()
-    
+    var fetchFailed: Bool = false
+    var showFailedMessage: Bool = false
+    var dataLoading = false
+
     private let repository: RoundsRepository
-    private var dataLoading = false
     private var timer: AnyCancellable?
     
     var activeRound: Round?
@@ -61,7 +63,7 @@ import Combine
         if dataLoading {
             return
         }
-        
+        fetchFailed = false
         dataLoading = true
         let res = await repository.getRounds(gameId: Config.gameId)
         dataLoading = false
@@ -72,12 +74,14 @@ import Combine
             case .failure(let failure):
                 print(failure.localizedDescription)
                 rounds = []
+                fetchFailed = true
+                showFailedMessage = true
         }
     }
 }
 
 class MockRoundsViewModel: RoundsViewModel {
-    init() {
-        super.init(repository: MockRoundsRepository())
+    init(withError: Bool = false) {
+        super.init(repository: MockRoundsRepository(withError: withError))
     }
 }

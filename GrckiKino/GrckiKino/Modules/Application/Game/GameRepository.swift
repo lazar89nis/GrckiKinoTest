@@ -25,7 +25,15 @@ struct GameWebRepository: GameRepository {
 }
 
 class MockGameRepository: GameRepository {
+    
+    var withError: Bool
+    
+    init(withError: Bool) {
+        self.withError = withError
+    }
+    
     func getResults(gameId: Int, fromDate: String, toDate: String) async -> Result<[Round], NetworkError> {
-        return .success(Round.fixtures())
+        try? await Task.sleep(nanoseconds: 2_000_000_000)
+        return withError ? .failure(.invalidURL) : .success(Round.fixtures())
     }
 }

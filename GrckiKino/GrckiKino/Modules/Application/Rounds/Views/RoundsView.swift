@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AlertToast
 
 struct RoundsView: View {
     @State var viewModel: RoundsViewModel
@@ -16,13 +17,23 @@ struct RoundsView: View {
             VStack(spacing: 0) {
                 titleView
                     .padding(.top, 6)
-                infoTextView
-                    .padding(.vertical, 10)
                 Group {
-                    if viewModel.rounds.isEmpty {
+                    if viewModel.rounds.isEmpty && viewModel.dataLoading {
                         loader
                     } else {
+                        infoTextView
+                            .padding(.vertical, 10)
                         listView
+                    }
+                }
+                if viewModel.fetchFailed {
+                    Button(action: {
+                        Task {
+                            await viewModel.loadRounds()
+                        }
+                    }) {
+                        Text("Try again")
+                            .foregroundColor(.appTextWhite)
                     }
                 }
             }
@@ -31,6 +42,17 @@ struct RoundsView: View {
             .toolbar(.hidden, for: .navigationBar)
             navigationLinks
                 
+        }
+        .toast(isPresenting: $viewModel.showFailedMessage, duration: 3, tapToDismiss: true){
+            AlertToast(displayMode: .alert,
+                       type: .error(.appTextWhite),
+                       title: String.localized(key: "There was an error getting data"),
+                       subTitle: String.localized(key: "Please try again"),
+                       style: AlertToast.AlertStyle.style(backgroundColor:.appLightRed,
+                                                          titleColor: .appTextWhite,
+                                                          subTitleColor: .appTextWhite,
+                                                          titleFont: .bodyLargeBold,
+                                                          subTitleFont: .bodyLarge))
         }
         .onAppear {
             Task {
@@ -86,7 +108,7 @@ struct RoundsView: View {
         ProgressView()
             .progressViewStyle(CircularProgressViewStyle())
             .tint(.appTextWhite)
-            .scaleEffect(2.5)
+            .scaleEffect(2)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
     
@@ -115,7 +137,7 @@ struct RoundsView: View {
 }
 
 #Preview {
-    let viewModel = MockRoundsViewModel()
+    let viewModel = MockRoundsViewModel(withError: false)
     return RoundsView(viewModel: viewModel,
                       coordinator: RoundsCoordinator(dependency: RoundsDependency()))
 }

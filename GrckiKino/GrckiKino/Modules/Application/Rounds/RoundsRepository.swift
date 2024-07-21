@@ -25,7 +25,14 @@ struct RoundsWebRepository: RoundsRepository {
 }
 
 class MockRoundsRepository: RoundsRepository {
+    var withError: Bool
+    
+    init(withError: Bool = false) {
+        self.withError = withError
+    }
+    
     func getRounds(gameId: Int) async -> Result<[Round], NetworkError> {
-        return .success(Round.activeFixtures(count: 20))
+        try? await Task.sleep(nanoseconds: 2_000_000_000)
+        return withError ? .failure(.invalidURL) : .success(Round.activeFixtures(count: 20))
     }
 }
