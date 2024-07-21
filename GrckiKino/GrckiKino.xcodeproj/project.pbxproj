@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7E876E922C4BDA7300784B9D /* OddsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E876E912C4BDA7300784B9D /* OddsView.swift */; };
 		7EB469522C4D8AF200241341 /* OddsBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB469512C4D8AF200241341 /* OddsBubbleView.swift */; };
+		7EB469552C4DA81C00241341 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB469542C4DA81C00241341 /* WebView.swift */; };
 		7EBE9BFC2C4AD06A00C1989F /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9BFB2C4AD06A00C1989F /* GameRepository.swift */; };
 		7EBE9BFE2C4AD07500C1989F /* GameDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9BFD2C4AD07500C1989F /* GameDependency.swift */; };
 		7EBE9C002C4AD08100C1989F /* GameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9BFF2C4AD08100C1989F /* GameCoordinator.swift */; };
@@ -75,6 +76,7 @@
 /* Begin PBXFileReference section */
 		7E876E912C4BDA7300784B9D /* OddsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsView.swift; sourceTree = "<group>"; };
 		7EB469512C4D8AF200241341 /* OddsBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsBubbleView.swift; sourceTree = "<group>"; };
+		7EB469542C4DA81C00241341 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		7EBE9BFB2C4AD06A00C1989F /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
 		7EBE9BFD2C4AD07500C1989F /* GameDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDependency.swift; sourceTree = "<group>"; };
 		7EBE9BFF2C4AD08100C1989F /* GameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinator.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			children = (
 				7EBE9C0E2C4AE14800C1989F /* InsettableShapes.swift */,
 				7EBE9C2C2C4B4D6500C1989F /* RoundInfoView.swift */,
+				7EB469542C4DA81C00241341 /* WebView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				7ED047D02C4A8E6F004DB2F9 /* UIScreen+Extensions.swift in Sources */,
 				7EBE9BFE2C4AD07500C1989F /* GameDependency.swift in Sources */,
 				7EBE9BFC2C4AD06A00C1989F /* GameRepository.swift in Sources */,
+				7EB469552C4DA81C00241341 /* WebView.swift in Sources */,
 				7EBE9C272C4B44C400C1989F /* PlayTableViewModel.swift in Sources */,
 				7EF34E4F2C4C6390001EFFB9 /* String+Extensions.swift in Sources */,
 				7EBE9C2D2C4B4D6500C1989F /* RoundInfoView.swift in Sources */,

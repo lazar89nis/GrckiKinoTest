@@ -6,27 +6,22 @@
 //
 
 import SwiftUI
-import WebKit
+
 
 struct LiveDrawView: View {
+    @State private var isLoading = true
+    
     var body: some View {
-        WebView()
-    }
-}
-
-struct WebView: UIViewRepresentable {
-    let webView: WKWebView
-    
-    init() {
-        webView = WKWebView(frame: .zero)
-        webView.backgroundColor = UIColor(named: R.color.background.name)!
-    }
-    
-    func makeUIView(context: Context) -> WKWebView {
-        return webView
-    }
-    func updateUIView(_ uiView: WKWebView, context: Context) {
-        webView.load(URLRequest(url: URL(string: Config.drawAnimationUrl)!))
+        ZStack {
+            if isLoading {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle())
+                    .tint(.appTextWhite)
+                    .scaleEffect(2)
+            }
+            WebView(isLoading: $isLoading)
+                .opacity(isLoading ? 0 : 1)
+        }.background(Color.appBackground)
     }
 }
 
