@@ -48,7 +48,7 @@ struct SplashView: View {
     }
     
     var logoView: some View {
-        Text("Grcki kino")
+        Text("Greek keno")
             .textCase(.uppercase)
             .foregroundColor(.appTextWhite)
             .font(.appTitle)

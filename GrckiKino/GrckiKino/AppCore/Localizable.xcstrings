@@ -67,12 +67,12 @@
         }
       }
     },
-    "Grcki kino" : {
+    "Greek keno" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Grcki kino"
+            "value" : "Greek keno"
           }
         },
         "sr-Latn" : {

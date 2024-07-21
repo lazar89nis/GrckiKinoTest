@@ -65,7 +65,7 @@ struct RoundsView: View {
     }
     
     var titleView: some View {
-        Text("Grcki kino")
+        Text("Greek keno")
             .textCase(.uppercase)
             .font(.appTitle)
             .foregroundColor(.appTextWhite)
