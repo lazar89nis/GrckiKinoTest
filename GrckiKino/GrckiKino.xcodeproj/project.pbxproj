@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E2863592C59093B00B87572 /* GrckiKinoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2863582C59093B00B87572 /* GrckiKinoTests.swift */; };
+		7E3648482C59A77500D7052B /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 7E3648472C59A77500D7052B /* RswiftLibrary */; };
 		7E876E922C4BDA7300784B9D /* OddsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E876E912C4BDA7300784B9D /* OddsView.swift */; };
 		7EB469522C4D8AF200241341 /* OddsBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB469512C4D8AF200241341 /* OddsBubbleView.swift */; };
 		7EB469552C4DA81C00241341 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB469542C4DA81C00241341 /* WebView.swift */; };
@@ -53,9 +54,7 @@
 		7ED047D92C4A8F80004DB2F9 /* Neue Plak SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ED047D52C4A8F80004DB2F9 /* Neue Plak SemiBold.ttf */; };
 		7ED047DA2C4A8F80004DB2F9 /* Neue Plak Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ED047D62C4A8F80004DB2F9 /* Neue Plak Black.ttf */; };
 		7ED047DB2C4A8F80004DB2F9 /* Neue Plak Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ED047D72C4A8F80004DB2F9 /* Neue Plak Bold.ttf */; };
-		7EE6F40E2C4A933F00A17D77 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 7EE6F40D2C4A933F00A17D77 /* RswiftLibrary */; };
 		7EE6F4132C4A948800A17D77 /* RSwift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6F4122C4A948800A17D77 /* RSwift+Extensions.swift */; };
-		7EE6F4192C4A965300A17D77 /* rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 7EE6F4182C4A965300A17D77 /* rswift */; };
 		7EE6F41C2C4A9B7000A17D77 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE6F41B2C4A9B7000A17D77 /* Launch Screen.storyboard */; };
 		7EE6F41F2C4A9D7600A17D77 /* RoundsListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6F41E2C4A9D7600A17D77 /* RoundsListRow.swift */; };
 		7EE6F4232C4A9F8300A17D77 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7EE6F4222C4A9F8300A17D77 /* Alamofire */; };
@@ -162,11 +161,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E3648482C59A77500D7052B /* RswiftLibrary in Frameworks */,
 				7EE6F4232C4A9F8300A17D77 /* Alamofire in Frameworks */,
-				7EE6F40E2C4A933F00A17D77 /* RswiftLibrary in Frameworks */,
 				7EE6F4292C4A9FDA00A17D77 /* SwiftyJSON in Frameworks */,
 				7EBE9C172C4B1B8100C1989F /* AlertToast in Frameworks */,
-				7EE6F4192C4A965300A17D77 /* rswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +465,8 @@
 				7E28635B2C59093B00B87572 /* PBXTargetDependency */,
 			);
 			name = GrckiKinoTests;
+			packageProductDependencies = (
+			);
 			productName = GrckiKinoTests;
 			productReference = 7E2863562C59093B00B87572 /* GrckiKinoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -486,11 +486,10 @@
 			);
 			name = GrckiKino;
 			packageProductDependencies = (
-				7EE6F40D2C4A933F00A17D77 /* RswiftLibrary */,
-				7EE6F4182C4A965300A17D77 /* rswift */,
 				7EE6F4222C4A9F8300A17D77 /* Alamofire */,
 				7EE6F4282C4A9FDA00A17D77 /* SwiftyJSON */,
 				7EBE9C162C4B1B8100C1989F /* AlertToast */,
+				7E3648472C59A77500D7052B /* RswiftLibrary */,
 			);
 			productName = GrckiKino;
 			productReference = 7ED047922C4A8026004DB2F9 /* GrckiKino.app */;
@@ -951,25 +950,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7E3648472C59A77500D7052B /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EE6F40C2C4A933F00A17D77 /* XCRemoteSwiftPackageReference "R" */;
+			productName = RswiftLibrary;
+		};
 		7EBE9C162C4B1B8100C1989F /* AlertToast */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7EBE9C152C4B1B8100C1989F /* XCRemoteSwiftPackageReference "AlertToast" */;
 			productName = AlertToast;
 		};
-		7EE6F40D2C4A933F00A17D77 /* RswiftLibrary */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7EE6F40C2C4A933F00A17D77 /* XCRemoteSwiftPackageReference "R" */;
-			productName = RswiftLibrary;
-		};
 		7EE6F40F2C4A93C300A17D77 /* RswiftGenerateInternalResources */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7EE6F40C2C4A933F00A17D77 /* XCRemoteSwiftPackageReference "R" */;
 			productName = "plugin:RswiftGenerateInternalResources";
-		};
-		7EE6F4182C4A965300A17D77 /* rswift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7EE6F40C2C4A933F00A17D77 /* XCRemoteSwiftPackageReference "R" */;
-			productName = rswift;
 		};
 		7EE6F4222C4A9F8300A17D77 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
