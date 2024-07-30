@@ -464,7 +464,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7E2863622C5921FC00B87572 /* PBXTargetDependency */,
 				7E28635B2C59093B00B87572 /* PBXTargetDependency */,
 			);
 			name = GrckiKinoTests;
@@ -641,10 +640,6 @@
 			isa = PBXTargetDependency;
 			target = 7ED047912C4A8026004DB2F9 /* GrckiKino */;
 			targetProxy = 7E28635A2C59093B00B87572 /* PBXContainerItemProxy */;
-		};
-		7E2863622C5921FC00B87572 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 7E2863612C5921FC00B87572 /* RswiftGenerateInternalResources */;
 		};
 		7EE6F4102C4A93C300A17D77 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -956,11 +951,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7E2863612C5921FC00B87572 /* RswiftGenerateInternalResources */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7EE6F40C2C4A933F00A17D77 /* XCRemoteSwiftPackageReference "R" */;
-			productName = "plugin:RswiftGenerateInternalResources";
-		};
 		7EBE9C162C4B1B8100C1989F /* AlertToast */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7EBE9C152C4B1B8100C1989F /* XCRemoteSwiftPackageReference "AlertToast" */;
