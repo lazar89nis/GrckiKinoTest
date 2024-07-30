@@ -28,6 +28,12 @@ final class GrckiKinoTests: XCTestCase {
         let value = 2 + 2
         XCTAssertEqual(value, 4)
     }
+    
+    func testExample2() throws {
+        // Example of a functional test case.
+        let value = 3 + 2
+        XCTAssertEqual(value, 5)
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
