@@ -7,7 +7,8 @@ on:
   pull_request:
     branches:
       - features/CICD_setup
-
+  workflow_dispatch: # Allows manual trigger
+  
 jobs:
   build:
     runs-on: macos-latest
@@ -19,7 +20,6 @@ jobs:
     - name: Build and Test
       run: |
         xcodebuild clean build test \
-        #-workspace YourProject.xcworkspace \
         -project GrckiKino.xcodeproj \
         -scheme GrckiKino \
         -sdk iphonesimulator \
