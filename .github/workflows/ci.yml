@@ -20,9 +20,10 @@ jobs:
     - name: Post clone setup
       run: ./GrckiKino/ci_scripts/ci_post_clone.sh
   
+    - name: Set up xCode
     - uses: maxim-lobanov/setup-xcode@v1
-        with:
-          xcode-version: 15.4
+      with:
+        xcode-version: 15.4
           
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
