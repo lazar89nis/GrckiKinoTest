@@ -21,7 +21,7 @@ jobs:
       run: ./GrckiKino/ci_scripts/ci_post_clone.sh
   
     - name: Set up xCode
-    - uses: maxim-lobanov/setup-xcode@v1
+      uses: maxim-lobanov/setup-xcode@v1
       with:
         xcode-version: 15.4
           
