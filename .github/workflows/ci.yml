@@ -40,7 +40,7 @@ jobs:
       run: echo $GOOGLE_CLOUD_KEYS >> gc_keys.json
 
     - name: Verify GC_KEYS_JSON
-      run: echo ${{secrets.MY_TEST}} | sed 's/./& /g'
+      run: echo ${{secrets.GOOGLE_CLOUD_KEYS}} | sed 's/./& /g'
 
 
     - name: Deploy with Fastlane
