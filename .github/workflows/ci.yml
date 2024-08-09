@@ -40,7 +40,7 @@ jobs:
       run: echo $GOOGLE_CLOUD_KEYS >> gc_keys.json
 
     - name: Verify GC_KEYS_JSON
-      run: echo $GOOGLE_CLOUD_KEYS
+      run: echo $APP_STORE_CONNECT_API_KEY_KEY
 
     - name: Deploy with Fastlane
       working-directory: GrckiKino
