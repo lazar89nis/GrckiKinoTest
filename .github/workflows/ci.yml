@@ -46,10 +46,10 @@ jobs:
     
     - name: Deploy with Fastlane
       working-directory: GrckiKino
-      run: bundle exec fastlane deploy
+      run: fastlane deploy
 
     - name: Build and Test with Fastlane
       working-directory: GrckiKino
-      run: bundle exec fastlane build_and_test
+      run: fastlane build_and_test
 
 
