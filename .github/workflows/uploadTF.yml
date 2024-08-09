@@ -9,10 +9,10 @@ env:
 on:
   push:
     branches:
-      - features/CICD_setup
+      - features/CICD
   pull_request:
     branches:
-      - features/CICD_setup
+      - features/CICD
   workflow_dispatch: # Allows manual trigger
   
 jobs:
