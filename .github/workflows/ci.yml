@@ -30,13 +30,14 @@ jobs:
       with:
         ruby-version: '2.7' # specify your ruby version
         bundler-cache: true
-          
-    - name: Debugging - List Files
-      run: ls -la GrckiKino
         
     - name: Install Fastlane
       working-directory: GrckiKino
       run: bundle install
+
+    - name: Deploy with Fastlane
+      working-directory: GrckiKino
+      run: bundle exec fastlane deploy
 
     - name: Build and Test with Fastlane
       working-directory: GrckiKino
