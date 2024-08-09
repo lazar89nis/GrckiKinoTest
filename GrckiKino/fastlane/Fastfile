@@ -87,7 +87,9 @@ platform :ios do
     )
     #pilot(api_key: api_key)
     increment_build_number({
-      build_number: latest_testflight_build_number(api_key: api_key) + 1
+      build_number: latest_testflight_build_number(
+        app_identifier: "com.lazar89nis.GrckiKino",
+      	api_key: api_key) + 1
     })
     gym 
     deliver(
