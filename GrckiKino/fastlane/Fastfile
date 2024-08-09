@@ -27,7 +27,8 @@ platform :ios do
       issuer_id: issuer_id,
       #key_filepath: key_filepath,
       key_content: $APP_STORE_CONNECT_API_KEY_KEY,
-      in_house: true
+      is_key_content_base64: true
+      #in_house: true
     )
 
     latest_build_number = latest_testflight_build_number(
