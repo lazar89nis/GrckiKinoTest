@@ -40,6 +40,9 @@ jobs:
       run: echo "$GOOGLE_CLOUD_KEYS" > gc_keys.json  # Changed to `>`
       env:
         GOOGLE_CLOUD_KEYS: ${{ secrets.GOOGLE_CLOUD_KEYS }}
+
+    - name: Verify ExportOptions.plist Location
+      run: ls -la ./fastlane
     
     - name: Deploy with Fastlane
       working-directory: GrckiKino
