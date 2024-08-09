@@ -42,7 +42,7 @@ jobs:
         GOOGLE_CLOUD_KEYS: ${{ secrets.GOOGLE_CLOUD_KEYS }}
 
     - name: Verify gc_keys.json
-        run: cat GrckiKino/gc_keys.json | head -c 100
+      run: cat GrckiKino/gc_keys.json | head -c 100
     
     - name: Deploy with Fastlane
       working-directory: GrckiKino
