@@ -44,6 +44,9 @@ jobs:
     - name: Verify ExportOptions.plist Location
       run: ls -la ./GrckiKino/fastlane
     
+    - name: Set Environment Variable
+      run: echo "FASTLANE_DIR=./GrckiKino/fastlane" >> $GITHUB_ENV
+    
     - name: Deploy with Fastlane
       working-directory: GrckiKino
       run: bundle exec fastlane deploy
