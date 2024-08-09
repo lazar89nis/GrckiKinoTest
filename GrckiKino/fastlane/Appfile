@@ -1,0 +1,5 @@
+apple_id("lazar@hypercubesoft.com") # Your Apple Developer Portal username
+app_identifier("com.lazar89nis.GrckiKino") # The bundle identifier of your app
+
+itc_team_id("E5FYD94489") # App Store Connect Team ID
+team_id("E5FYD94489") # Developer Portal Team ID

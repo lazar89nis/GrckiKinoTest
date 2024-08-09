@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E2863592C59093B00B87572 /* GrckiKinoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2863582C59093B00B87572 /* GrckiKinoTests.swift */; };
+		7E3648482C59A77500D7052B /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 7E3648472C59A77500D7052B /* RswiftLibrary */; };
 		7E876E922C4BDA7300784B9D /* OddsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E876E912C4BDA7300784B9D /* OddsView.swift */; };
 		7EB469522C4D8AF200241341 /* OddsBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB469512C4D8AF200241341 /* OddsBubbleView.swift */; };
 		7EB469552C4DA81C00241341 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB469542C4DA81C00241341 /* WebView.swift */; };
@@ -52,9 +54,7 @@
 		7ED047D92C4A8F80004DB2F9 /* Neue Plak SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ED047D52C4A8F80004DB2F9 /* Neue Plak SemiBold.ttf */; };
 		7ED047DA2C4A8F80004DB2F9 /* Neue Plak Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ED047D62C4A8F80004DB2F9 /* Neue Plak Black.ttf */; };
 		7ED047DB2C4A8F80004DB2F9 /* Neue Plak Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ED047D72C4A8F80004DB2F9 /* Neue Plak Bold.ttf */; };
-		7EE6F40E2C4A933F00A17D77 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 7EE6F40D2C4A933F00A17D77 /* RswiftLibrary */; };
 		7EE6F4132C4A948800A17D77 /* RSwift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6F4122C4A948800A17D77 /* RSwift+Extensions.swift */; };
-		7EE6F4192C4A965300A17D77 /* rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 7EE6F4182C4A965300A17D77 /* rswift */; };
 		7EE6F41C2C4A9B7000A17D77 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE6F41B2C4A9B7000A17D77 /* Launch Screen.storyboard */; };
 		7EE6F41F2C4A9D7600A17D77 /* RoundsListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6F41E2C4A9D7600A17D77 /* RoundsListRow.swift */; };
 		7EE6F4232C4A9F8300A17D77 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7EE6F4222C4A9F8300A17D77 /* Alamofire */; };
@@ -73,7 +73,19 @@
 		7EF34E572C4C7162001EFFB9 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF34E562C4C7162001EFFB9 /* Color+Extensions.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7E28635A2C59093B00B87572 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7ED0478A2C4A8026004DB2F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7ED047912C4A8026004DB2F9;
+			remoteInfo = GrckiKino;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		7E2863562C59093B00B87572 /* GrckiKinoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrckiKinoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E2863582C59093B00B87572 /* GrckiKinoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrckiKinoTests.swift; sourceTree = "<group>"; };
 		7E876E912C4BDA7300784B9D /* OddsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsView.swift; sourceTree = "<group>"; };
 		7EB469512C4D8AF200241341 /* OddsBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsBubbleView.swift; sourceTree = "<group>"; };
 		7EB469542C4DA81C00241341 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
@@ -138,21 +150,35 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7E2863532C59093B00B87572 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7ED0478F2C4A8026004DB2F9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E3648482C59A77500D7052B /* RswiftLibrary in Frameworks */,
 				7EE6F4232C4A9F8300A17D77 /* Alamofire in Frameworks */,
-				7EE6F40E2C4A933F00A17D77 /* RswiftLibrary in Frameworks */,
 				7EE6F4292C4A9FDA00A17D77 /* SwiftyJSON in Frameworks */,
 				7EBE9C172C4B1B8100C1989F /* AlertToast in Frameworks */,
-				7EE6F4192C4A965300A17D77 /* rswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E2863572C59093B00B87572 /* GrckiKinoTests */ = {
+			isa = PBXGroup;
+			children = (
+				7E2863582C59093B00B87572 /* GrckiKinoTests.swift */,
+			);
+			path = GrckiKinoTests;
+			sourceTree = "<group>";
+		};
 		7EBE9BF82C4AD04600C1989F /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				7ED047942C4A8026004DB2F9 /* GrckiKino */,
+				7E2863572C59093B00B87572 /* GrckiKinoTests */,
 				7ED047932C4A8026004DB2F9 /* Products */,
 				7EE6F4172C4A965300A17D77 /* Frameworks */,
 			);
@@ -202,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				7ED047922C4A8026004DB2F9 /* GrckiKino.app */,
+				7E2863562C59093B00B87572 /* GrckiKinoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -423,6 +451,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7E2863552C59093B00B87572 /* GrckiKinoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E28635E2C59093B00B87572 /* Build configuration list for PBXNativeTarget "GrckiKinoTests" */;
+			buildPhases = (
+				7E2863522C59093B00B87572 /* Sources */,
+				7E2863532C59093B00B87572 /* Frameworks */,
+				7E2863542C59093B00B87572 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E28635B2C59093B00B87572 /* PBXTargetDependency */,
+			);
+			name = GrckiKinoTests;
+			packageProductDependencies = (
+			);
+			productName = GrckiKinoTests;
+			productReference = 7E2863562C59093B00B87572 /* GrckiKinoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7ED047912C4A8026004DB2F9 /* GrckiKino */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7ED047A02C4A8027004DB2F9 /* Build configuration list for PBXNativeTarget "GrckiKino" */;
@@ -438,11 +486,10 @@
 			);
 			name = GrckiKino;
 			packageProductDependencies = (
-				7EE6F40D2C4A933F00A17D77 /* RswiftLibrary */,
-				7EE6F4182C4A965300A17D77 /* rswift */,
 				7EE6F4222C4A9F8300A17D77 /* Alamofire */,
 				7EE6F4282C4A9FDA00A17D77 /* SwiftyJSON */,
 				7EBE9C162C4B1B8100C1989F /* AlertToast */,
+				7E3648472C59A77500D7052B /* RswiftLibrary */,
 			);
 			productName = GrckiKino;
 			productReference = 7ED047922C4A8026004DB2F9 /* GrckiKino.app */;
@@ -458,6 +505,10 @@
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					7E2863552C59093B00B87572 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 7ED047912C4A8026004DB2F9;
+					};
 					7ED047912C4A8026004DB2F9 = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -484,11 +535,19 @@
 			projectRoot = "";
 			targets = (
 				7ED047912C4A8026004DB2F9 /* GrckiKino */,
+				7E2863552C59093B00B87572 /* GrckiKinoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7E2863542C59093B00B87572 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7ED047902C4A8026004DB2F9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -507,6 +566,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7E2863522C59093B00B87572 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E2863592C59093B00B87572 /* GrckiKinoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7ED0478E2C4A8026004DB2F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -568,6 +635,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7E28635B2C59093B00B87572 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7ED047912C4A8026004DB2F9 /* GrckiKino */;
+			targetProxy = 7E28635A2C59093B00B87572 /* PBXContainerItemProxy */;
+		};
 		7EE6F4102C4A93C300A17D77 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			productRef = 7EE6F40F2C4A93C300A17D77 /* RswiftGenerateInternalResources */;
@@ -575,6 +647,44 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		7E28635C2C59093B00B87572 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 14;
+				DEVELOPMENT_TEAM = E5FYD94489;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lazar89nis.GrckiKinoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GrckiKino.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GrckiKino";
+			};
+			name = Debug;
+		};
+		7E28635D2C59093B00B87572 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 14;
+				DEVELOPMENT_TEAM = E5FYD94489;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lazar89nis.GrckiKinoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GrckiKino.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GrckiKino";
+			};
+			name = Release;
+		};
 		7ED0479E2C4A8027004DB2F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -699,8 +809,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_ASSET_PATHS = "\"GrckiKino/Preview Content\"";
 				DEVELOPMENT_TEAM = E5FYD94489;
 				ENABLE_PREVIEWS = YES;
@@ -723,6 +834,7 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lazar89nis.GrckiKino;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -738,10 +850,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_ASSET_PATHS = "\"GrckiKino/Preview Content\"";
-				DEVELOPMENT_TEAM = E5FYD94489;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = E5FYD94489;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GrckiKino/Info.plist;
@@ -762,6 +877,8 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lazar89nis.GrckiKino;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match AppStore com.lazar89nis.GrckiKino";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -775,6 +892,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7E28635E2C59093B00B87572 /* Build configuration list for PBXNativeTarget "GrckiKinoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E28635C2C59093B00B87572 /* Debug */,
+				7E28635D2C59093B00B87572 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7ED0478D2C4A8026004DB2F9 /* Build configuration list for PBXProject "GrckiKino" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -831,25 +957,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7E3648472C59A77500D7052B /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EE6F40C2C4A933F00A17D77 /* XCRemoteSwiftPackageReference "R" */;
+			productName = RswiftLibrary;
+		};
 		7EBE9C162C4B1B8100C1989F /* AlertToast */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7EBE9C152C4B1B8100C1989F /* XCRemoteSwiftPackageReference "AlertToast" */;
 			productName = AlertToast;
 		};
-		7EE6F40D2C4A933F00A17D77 /* RswiftLibrary */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7EE6F40C2C4A933F00A17D77 /* XCRemoteSwiftPackageReference "R" */;
-			productName = RswiftLibrary;
-		};
 		7EE6F40F2C4A93C300A17D77 /* RswiftGenerateInternalResources */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7EE6F40C2C4A933F00A17D77 /* XCRemoteSwiftPackageReference "R" */;
 			productName = "plugin:RswiftGenerateInternalResources";
-		};
-		7EE6F4182C4A965300A17D77 /* rswift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7EE6F40C2C4A933F00A17D77 /* XCRemoteSwiftPackageReference "R" */;
-			productName = rswift;
 		};
 		7EE6F4222C4A9F8300A17D77 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;

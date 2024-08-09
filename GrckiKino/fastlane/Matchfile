@@ -1,0 +1,6 @@
+google_cloud_bucket_name("grckikino-main")
+storage_mode("google_cloud")
+type("appstore") # The default type, can be: appstore, adhoc, enterprise or development
+team_id("E5FYD94489")
+app_identifier(["com.lazar89nis.GrckiKino"]) # The bundle identifier(s) of your app
+username("lazar@hypercubesoft.com") # Your Apple Developer Portal email

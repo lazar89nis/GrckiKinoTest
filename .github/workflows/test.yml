@@ -1,0 +1,36 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - features/CICD
+  pull_request:
+    branches:
+      - features/CICD
+  workflow_dispatch: # Allows manual trigger
+  
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Post clone setup
+      run: ./GrckiKino/ci_scripts/ci_post_clone.sh
+  
+    - name: Set up xCode
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: 15.4
+        
+    - name: Install Fastlane
+      working-directory: GrckiKino
+      run: bundle install
+
+    - name: Test with Fastlane
+      working-directory: GrckiKino
+      run: bundle exec fastlane test
+
+
