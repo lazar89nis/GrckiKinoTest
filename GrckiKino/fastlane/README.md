@@ -15,21 +15,13 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 ## iOS
 
-### ios build_and_test
+### ios pilot_tf
 
 ```sh
-[bundle exec] fastlane ios build_and_test
+[bundle exec] fastlane ios pilot_tf
 ```
 
-Build and Test the app
 
-### ios release
-
-```sh
-[bundle exec] fastlane ios release
-```
-
-Build and upload to TestFlight
 
 ### ios build
 
@@ -54,6 +46,14 @@ Runs all the tests
 ```
 
 Deploy app to App Store Connect
+
+### ios deploy_testflight
+
+```sh
+[bundle exec] fastlane ios deploy_testflight
+```
+
+Deploy app to TestFlight
 
 ----
 

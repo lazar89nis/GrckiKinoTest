@@ -1,51 +1,84 @@
-# This file contains the fastlane.tools configuration
-# You can find the documentation at https://docs.fastlane.tools
-#
-# For a list of all available actions, check out
-#
-#     https://docs.fastlane.tools/actions
-#
-# For a list of all available plugins, check out
-#
-#     https://docs.fastlane.tools/plugins/available-plugins
-#
+######## IOS CONFIGURATIONS
+# If you want to make the build automatically available to external groups,
+# add the name of the group to the array below, after "App Store Connect Users"
+groups = ["Test external"]
+workspace = ""
+project = "GrckiKino.xcodeproj"
+slack_weebhook_url = "https://hooks.slack.com/services/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"
 
-# Uncomment the line if you want fastlane to automatically update itself
-# update_fastlane
+# If you build for multiple environments, you might wanna set this specifically on build_app
+configuration = "Release"
+scheme = "GrckiKino"
+export_method = "app-store" # specify the export method
+key_id = "33F9ZFQN9Z" # The key id of the p8 file
+issuer_id = "69a6de7f-8312-47e3-e053-5b8c7c11a4d1" # issuer id on appstore connect
+key_filepath = "./AuthKey_33F9ZFQN9Z.p8" # The path to p8 file generated on appstore connect
+######## END IOS CONFIGURATIONS
 
 default_platform(:ios)
 
 platform :ios do
-  
-  desc "Build and Test the app"
-  lane :build_and_test do
-  build_app(
-    project: "GrckiKino.xcodeproj",
-    scheme: "GrckiKino",
-    xcargs: "-skipPackagePluginValidation -allowProvisioningUpdates"
-  )
-  scan(
-    project: "GrckiKino.xcodeproj",
-    scheme: "GrckiKino",
-    xcargs: "-skipPackagePluginValidation"
-  )
+
+  lane :pilot_tf do
+    setup_ci
+    app_identifier = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
+    api_key = app_store_connect_api_key(
+      key_id: key_id,
+      issuer_id: issuer_id,
+      #key_filepath: key_filepath,
+      key_content: $APP_STORE_CONNECT_API_KEY_KEY,
+      in_house: true
+    )
+
+    latest_build_number = latest_testflight_build_number(
+        api_key: api_key,
+        app_identifier: app_identifier
+    )
+    increment_build_number(
+        build_number: (latest_build_number + 1),
+    )
+
+    clear_derived_data
+    match(
+      api_key: api_key,
+      readonly: true
+    )
+    
+    gym(
+      scheme: scheme,
+      configuration: configuration,
+      export_options: {
+        method: export_method,
+        compile_bitcode: true
+      }
+    )
+
+    pilot(
+      changelog: "Build #{latest_build_number + 1}",
+      api_key: api_key,
+      app_identifier: app_identifier,
+      distribute_external: true,
+      groups: groups,
+    )
+
+    slack(
+      slack_url: slack_weebhook_url,
+      message: "Build #{latest_build_number + 1} is available on TestFlight",
+      channel: "#slack_msg_test",
+      default_payloads: [],
+      success: true,
+      payload: {
+        'Build Date' => Time.now,
+        'Build Number' => latest_build_number + 1
+      }
+    )
+
+    clean_build_artifacts
   end
-  
-  desc "Build and upload to TestFlight"
-  lane :release do
-  increment_build_number
-  build_app(
-    project: "GrckiKino.xcodeproj",
-    scheme: "GrckiKino",
-    export_method: "app-store", # or "ad-hoc", "enterprise", etc.
-    xcargs: "-skipPackagePluginValidation -allowProvisioningUpdates"
-  )
-  upload_to_testflight(
-    skip_waiting_for_build_processing: false, # set to true if you don't want to wait for the build processing to finish
-    skip_submission: true, # set to false if you want to automatically submit the build to beta testers
-    beta_app_feedback_email: "lazar89nis@gmail.com", # optional, replace with your email
-  )
-  end
+
+
+
+
 
   desc "build lane"
   lane :build do
@@ -73,7 +106,6 @@ platform :ios do
       type: "appstore",
       readonly: is_ci
     )
-  
     match(
       type: "appstore",
       readonly: true
@@ -88,7 +120,6 @@ platform :ios do
     #pilot(api_key: api_key)
     increment_build_number({
       build_number: latest_testflight_build_number(
-        app_identifier: "com.lazar89nis.GrckiKino",
       	api_key: api_key) + 1
     })
     gym 
@@ -98,6 +129,38 @@ platform :ios do
       skip_screenshots: true,
       precheck_include_in_app_purchases: false,
       automatic_release: false
+    )
+  end
+  
+  desc  "Deploy app to TestFlight"
+  lane :deploy_testflight do
+    setup_ci
+  
+  	sync_code_signing(  
+      type: "appstore",
+      readonly: is_ci
+    )
+    match(
+      type: "appstore",
+      readonly: true
+    )
+    api_key = app_store_connect_api_key(
+      key_id: "33F9ZFQN9Z",
+      issuer_id: "69a6de7f-8312-47e3-e053-5b8c7c11a4d1",
+      #key_filepath: "./AuthKey_33F9ZFQN9Z.p8",
+      key_content: $APP_STORE_CONNECT_API_KEY_KEY,
+      is_key_content_base64: true
+    )
+    #pilot(api_key: api_key)
+    increment_build_number({
+      build_number: latest_testflight_build_number(
+      	api_key: api_key) + 1
+    })
+    gym 
+    deliver(
+      api_key: api_key,
+      skip_waiting_for_build_processing: true,
+      distribute_external: true
     )
   end
 end

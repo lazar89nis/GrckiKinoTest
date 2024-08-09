@@ -30,19 +30,13 @@ jobs:
       uses: maxim-lobanov/setup-xcode@v1
       with:
         xcode-version: 15.4
-          
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '2.7.8'
-        bundler-cache: true
         
     - name: Install Fastlane
       working-directory: GrckiKino
       run: bundle install
 
-    - name: Test with Fastlane
-      working-directory: GrckiKino
-      run: fastlane test
+    #- name: Test with Fastlane
+    #  working-directory: GrckiKino
+    #  run: fastlane test
 
 

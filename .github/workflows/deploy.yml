@@ -39,8 +39,12 @@ jobs:
       working-directory: GrckiKino
       run: echo "$GOOGLE_CLOUD_KEYS" > gc_keys.json
     
+    #- name: Deploy with Fastlane
+    #  working-directory: GrckiKino
+    #  run: fastlane deploy
     - name: Deploy with Fastlane
       working-directory: GrckiKino
-      run: fastlane deploy
+      run: fastlane pilot_tf
+
 
 
