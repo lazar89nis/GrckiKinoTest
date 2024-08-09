@@ -1,5 +1,10 @@
 name: iOS CI
-
+env:
+  GOOGLE_CLOUD_KEYS: ${{ secrets.GOOGLE_CLOUD_KEYS }}
+  APP_STORE_CONNECT_API_KEY_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY_KEY }}
+  FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+  FASTLANE_SESSION: $ {{ secrets.FASTLANE_SESSION }}
+  
 on:
   push:
     branches:
@@ -37,15 +42,11 @@ jobs:
 
     - name: Create gc_Keys
       working-directory: GrckiKino
-      run: echo "$GOOGLE_CLOUD_KEYS" > gc_keys.json  # Changed to `>`
-      env:
-        GOOGLE_CLOUD_KEYS: ${{ secrets.GOOGLE_CLOUD_KEYS }}
+      run: echo "$GOOGLE_CLOUD_KEYS" > gc_keys.json
     
     - name: Deploy with Fastlane
       working-directory: GrckiKino
       run: bundle exec fastlane deploy
-      env:
-        APP_STORE_CONNECT_API_KEY_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY_KEY }}
 
     - name: Build and Test with Fastlane
       working-directory: GrckiKino
