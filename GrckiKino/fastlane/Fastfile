@@ -78,13 +78,7 @@ platform :ios do
     increment_build_number({
       build_number: latest_testflight_build_number(api_key: api_key) + 1
     })
-    gym(
-      export_options: "./fastlane/ExportOptions.plist",
-      export_method: "app-store",
-      export_team_id: "E5FYD94489",
-      export_signing_identity: "Apple Distribution",
-      export_provisioning_profile: "match AppStore com.lazar89nis.GrckiKino"
-    )
+    gym(export_options: "./fastlane/ExportOptions.plist")
     deliver(
       api_key: api_key,
       force: true,
