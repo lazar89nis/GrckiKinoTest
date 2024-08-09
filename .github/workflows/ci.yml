@@ -39,13 +39,9 @@ jobs:
       working-directory: GrckiKino
       run: echo $GOOGLE_CLOUD_KEYS >> gc_keys.json
 
-    - name: Verify GC_KEYS_JSON
-      run: echo ${{secrets.GOOGLE_CLOUD_KEYS}} | sed 's/./& /g'
-
-
     - name: Deploy with Fastlane
       working-directory: GrckiKino
-      run: bundle exec fastlane deploy
+      run: fastlane deploy
 
     - name: Build and Test with Fastlane
       working-directory: GrckiKino
