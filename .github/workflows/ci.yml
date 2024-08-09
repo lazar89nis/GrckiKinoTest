@@ -38,7 +38,12 @@ jobs:
     - name: Create gc_Keys
       working-directory: GrckiKino
       run: echo $GOOGLE_CLOUD_KEYS >> gc_keys.json
+      env:
+        GOOGLE_CLOUD_KEYS: ${{ secrets.GOOGLE_CLOUD_KEYS }}
 
+    - name: Verify gc_keys.json
+        run: cat GrckiKino/gc_keys.json | head -c 100
+    
     - name: Deploy with Fastlane
       working-directory: GrckiKino
       run: fastlane deploy
