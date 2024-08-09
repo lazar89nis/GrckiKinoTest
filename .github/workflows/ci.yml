@@ -30,8 +30,9 @@ jobs:
       with:
         ruby-version: '2.7' # specify your ruby version
         bundler-cache: true
+        
     - name: Change Directory
-        run: cd GrckiKino
+      run: cd GrckiKino
         
     - name: Install Fastlane
       run: bundle install
