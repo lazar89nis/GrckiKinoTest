@@ -41,16 +41,8 @@ jobs:
       working-directory: GrckiKino
       run: bundle install
 
-    - name: Create gc_Keys
+    - name: Build and Test with Fastlane
       working-directory: GrckiKino
-      run: echo "$GOOGLE_CLOUD_KEYS" > gc_keys.json
-    
-    - name: Deploy with Fastlane
-      working-directory: GrckiKino
-      run: fastlane deploy
-
-    #- name: Build and Test with Fastlane
-    #  working-directory: GrckiKino
-    #  run: fastlane build_and_test
+      run: fastlane test
 
 

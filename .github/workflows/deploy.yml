@@ -1,0 +1,52 @@
+name: iOS CI
+env:
+  GOOGLE_CLOUD_KEYS: ${{ secrets.GOOGLE_CLOUD_KEYS }}
+  APP_STORE_CONNECT_API_KEY_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY_KEY }}
+  FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+  FASTLANE_SESSION: $ {{ secrets.FASTLANE_SESSION }}
+  KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
+
+on:
+  push:
+    branches:
+      - features/CICD_setup
+  pull_request:
+    branches:
+      - features/CICD_setup
+  workflow_dispatch: # Allows manual trigger
+  
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Post clone setup
+      run: ./GrckiKino/ci_scripts/ci_post_clone.sh
+  
+    - name: Set up xCode
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: 15.4
+          
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '2.7.8'
+        bundler-cache: true
+        
+    - name: Install Fastlane
+      working-directory: GrckiKino
+      run: bundle install
+
+    - name: Create gc_Keys
+      working-directory: GrckiKino
+      run: echo "$GOOGLE_CLOUD_KEYS" > gc_keys.json
+    
+    - name: Deploy with Fastlane
+      working-directory: GrckiKino
+      run: fastlane deploy
+
+
