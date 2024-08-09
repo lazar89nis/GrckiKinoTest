@@ -1,10 +1,4 @@
 name: Test
-env:
-  GOOGLE_CLOUD_KEYS: ${{ secrets.GOOGLE_CLOUD_KEYS }}
-  APP_STORE_CONNECT_API_KEY_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY_KEY }}
-  FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
-  FASTLANE_SESSION: $ {{ secrets.FASTLANE_SESSION }}
-  KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
 
 on:
   push:
@@ -35,8 +29,8 @@ jobs:
       working-directory: GrckiKino
       run: bundle install
 
-    #- name: Test with Fastlane
-    #  working-directory: GrckiKino
-    #  run: fastlane test
+    - name: Test with Fastlane
+      working-directory: GrckiKino
+      run: fastlane test
 
 
