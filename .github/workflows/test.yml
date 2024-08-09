@@ -31,6 +31,6 @@ jobs:
 
     - name: Test with Fastlane
       working-directory: GrckiKino
-      run: fastlane test
+      run: bundle exec fastlane test
 
 

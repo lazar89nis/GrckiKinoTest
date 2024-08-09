@@ -1,4 +1,4 @@
-name: Deploy
+name: Upload TestFlight
 env:
   GOOGLE_CLOUD_KEYS: ${{ secrets.GOOGLE_CLOUD_KEYS }}
   APP_STORE_CONNECT_API_KEY_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY_KEY }}
