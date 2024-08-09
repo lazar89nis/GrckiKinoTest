@@ -53,7 +53,7 @@ Runs all the tests
 [bundle exec] fastlane ios deploy
 ```
 
-
+Deploy app to App Store Connect
 
 ----
 

@@ -28,7 +28,7 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '2.7' # specify your ruby version
+        ruby-version: '2.7'
         bundler-cache: true
         
     - name: Install Fastlane
@@ -37,16 +37,13 @@ jobs:
 
     - name: Create gc_Keys
       working-directory: GrckiKino
-      run: echo $GOOGLE_CLOUD_KEYS >> gc_keys.json
+      run: echo "$GOOGLE_CLOUD_KEYS" > gc_keys.json  # Changed to `>`
       env:
         GOOGLE_CLOUD_KEYS: ${{ secrets.GOOGLE_CLOUD_KEYS }}
-
-    - name: Verify gc_keys.json
-      run: cat GrckiKino/gc_keys.json
     
     - name: Deploy with Fastlane
       working-directory: GrckiKino
-      run: fastlane deploy
+      run: bundle exec fastlane deploy
 
     - name: Build and Test with Fastlane
       working-directory: GrckiKino
