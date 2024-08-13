@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 class Config {
-    static let baseUrl = "https://api.opap.gr/draws/v3.0"
+    static let baseUrl = EnvironmentValues.serverURL//"https://api.opap.gr/draws/v3.0"
     static let drawAnimationUrl = "https://www.mozzartbet.com/sr/lotto-animation/26#/"
     static let gameId = 1100
     static let numberOfGridColumns = 8

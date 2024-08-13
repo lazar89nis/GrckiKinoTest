@@ -13,5 +13,7 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>server_url</key>
+	<string>$(server_url)</string>
 </dict>
 </plist>

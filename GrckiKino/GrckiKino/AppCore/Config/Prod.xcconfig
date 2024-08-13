@@ -1,0 +1,18 @@
+//
+//  Prod.xcconfig
+//  GrckiKino
+//
+//  Created by Lazar Djordjevic on 13.8.24..
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+//Application name
+app_name = PRODGrckiKino
+
+//Application icon
+ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon
+
+//Server URL
+server_url = https:/$()/api.opap.gr/draws/v3.0

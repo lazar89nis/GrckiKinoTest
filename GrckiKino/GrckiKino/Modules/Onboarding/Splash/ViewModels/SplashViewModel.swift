@@ -16,6 +16,9 @@ enum AppState {
     var state: AppState = .starting
     
     init() {
+        //Just to show values for testing
+        print(EnvironmentValues.appName)
+        print(EnvironmentValues.serverURL)
     }
     
     func splashFinished() {
