@@ -47,14 +47,16 @@ platform :ios do
       readonly: true
     )
     
-    gym(
-      scheme: scheme,
-      configuration: configuration,
-      export_options: {
-        method: export_method,
-        compile_bitcode: true
-      }
-    )
+    #gym(
+    #  scheme: scheme,
+    #  configuration: configuration,
+    #  export_options: {
+    #    method: export_method,
+    #    compile_bitcode: true
+    #  }
+    #)
+
+	gym
 
     pilot(
       changelog: "Build #{latest_build_number + 1}",
