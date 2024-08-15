@@ -16,7 +16,7 @@
                   <BuildableReference
                      BuildableIdentifier = "primary"
                      BlueprintIdentifier = "7ED047912C4A8026004DB2F9"
-                     BuildableName = ".app"
+                     BuildableName = "PRODGrckiKino.app"
                      BlueprintName = "GrckiKino"
                      ReferencedContainer = "container:GrckiKino.xcodeproj">
                   </BuildableReference>
@@ -34,7 +34,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7ED047912C4A8026004DB2F9"
-               BuildableName = "GrckiKino.app"
+               BuildableName = "PRODGrckiKino.app"
                BlueprintName = "GrckiKino"
                ReferencedContainer = "container:GrckiKino.xcodeproj">
             </BuildableReference>
@@ -77,7 +77,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7ED047912C4A8026004DB2F9"
-            BuildableName = "GrckiKino.app"
+            BuildableName = "PRODGrckiKino.app"
             BlueprintName = "GrckiKino"
             ReferencedContainer = "container:GrckiKino.xcodeproj">
          </BuildableReference>
@@ -94,7 +94,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7ED047912C4A8026004DB2F9"
-            BuildableName = "GrckiKino.app"
+            BuildableName = "PRODGrckiKino.app"
             BlueprintName = "GrckiKino"
             ReferencedContainer = "container:GrckiKino.xcodeproj">
          </BuildableReference>

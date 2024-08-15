@@ -94,10 +94,10 @@ platform :ios do
   lane :deploy do
     setup_ci
   
-  	sync_code_signing(  
-      type: "appstore",
-      readonly: is_ci
-    )
+  	#sync_code_signing(  
+    #  type: "appstore",
+    #  readonly: is_ci
+    #)
     match(
       type: "appstore",
       readonly: true
